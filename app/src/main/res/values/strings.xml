@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tea Time</string>
+    <string name="welcome_text">Find teas by:</string>
+    <string name="region_button">region</string>
+    <string name="type_button">type</string>
+    <string name="japan_button">japan</string>
+    <string name="china_button">china</string>
+    <string name="africa_button">africa</string>
+    <string name="india_button">india</string>
+    <string name="other_region_button">other</string>
+    <string name="tea_black">black teas</string>
+    <string name="tea_white">white teas</string>
+    <string name="tea_green">green teas</string>
+    <string name="tea_oolong">oolong teas</string>
+    <string name="tea_other">other teas</string>
+    <string name="back_button">back</string>
+
+</resources>
