@@ -13,31 +13,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/japan_button"
-        android:text="@string/japan_button"/>
+        android:text="@string/japan_button"
+        android:onClick="teaChina"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/china_button"
         android:text="@string/china_button"
-        android:layout_below="@+id/japan_button"/>
+        android:layout_below="@+id/japan_button"
+        android:onClick="teaChina"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/africa_button"
         android:text="@string/africa_button"
-        android:layout_below="@+id/china_button"/>
+        android:layout_below="@+id/china_button"
+        android:onClick="teaChina"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/india_button"
         android:text="@string/india_button"
-        android:layout_below="@+id/africa_button"/>
+        android:layout_below="@+id/africa_button"
+        android:onClick="teaChina"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/other_region_button"
         android:text="@string/other_region_button"
-        android:layout_below="@+id/india_button"/>
+        android:layout_below="@+id/india_button"
+        android:onClick="teaChina"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,5 +58,9 @@
         android:layout_alignParentLeft="true"
         android:text="Choose by Type"
         android:onClick="teaByType"/>
+
+    <!-- TODO update onClick once methods are done -->
+    <!-- TODO fit on smaller screens -->
+
 
 </RelativeLayout>

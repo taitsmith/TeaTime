@@ -15,6 +15,13 @@ public class Region extends AppCompatActivity {
         Toast.makeText(this, "Choose a region", Toast.LENGTH_LONG).show();
     }
 
+    protected void teaChina(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        startActivity(intent);
+    }
+
+    //TODO add other region methods
+
     public void mainMenu(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

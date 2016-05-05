@@ -14,35 +14,45 @@
         android:layout_height="wrap_content"
         android:id="@+id/black_tea_button"
         android:text="@string/tea_black"
+        android:onClick="teaBlack"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/white_tea_button"
         android:text="@string/tea_white"
         android:layout_below="@+id/black_tea_button"
+        android:onClick="teaBlack"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/green_tea_button"
         android:text="@string/tea_green"
         android:layout_below="@+id/white_tea_button"
+        android:onClick="teaBlack"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/oolong_tea_button"
         android:text="@string/tea_oolong"
         android:layout_below="@+id/green_tea_button"
+        android:onClick="teaBlack"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/other_tea_button"
         android:text="@string/tea_other"
         android:layout_below="@+id/oolong_tea_button"
+        android:onClick="teaBlack"
         />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +60,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:onClick="mainMenu"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,3 +70,5 @@
         android:onClick="teaByRegion"/>
 
 </RelativeLayout>
+<!-- TODO update onClick once methods are done -->
+<!-- TODO fit on smaller screens -->
