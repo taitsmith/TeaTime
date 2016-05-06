@@ -8,10 +8,17 @@ import java.util.UUID;
 
 /**
  * Created by taits on 03-May-16.
+ * Does all the work of creating the list
+ * of teas which are then fed through BlackTeaListFragment
+ * and called by BlackTeaListActivity when buttons are pressed
  */
 public class TeaLab {
     private static TeaLab sTeaList;
-    private List<Tea> mTeas;
+    private List<Tea> mgreenTeas;
+    private List<Tea> mblackTeas;
+    private List<Tea> mwhiteTeas, moolongTeas, motherRegionTeas, mchinaTeas, mafricaTeas,
+                        mjapanTeas, mindiaTeas, motherTypeTeas;
+
 
     public static TeaLab get(Context context) {
         if (sTeaList == null) {
@@ -21,32 +28,68 @@ public class TeaLab {
     }
 
     private TeaLab(Context context){
-        mTeas = new ArrayList<>();
-        for(int i = 0; i < 20; i++) {
-            Tea tea = new Tea();
-            tea.setmName("Fake Tea #" + i);
+        mgreenTeas = new ArrayList<>();
+        mblackTeas = new ArrayList<>();
+        mwhiteTeas = new ArrayList<>();
+        mchinaTeas = new ArrayList<>();
 
-            if(i % 2 == 0) { tea.setmType("Green"); }
-                else if(i % 3 == 0) {
-                tea.setmType("White");
-            } else tea.setmType("Black");
 
-            if(i % 2 == 0) tea.setmRegion("China");
-            else if (i % 3 == 0) tea.setmRegion("India");
-            else tea.setmRegion("The Moon");
+        Tea assam = new Tea();
+        assam.setmName("Assam");
+        assam.setmRegion("China");
+        assam.setmType("Black");
+        mblackTeas.add(assam);
+        mchinaTeas.add(assam);
 
-            mTeas.add(tea);
 
-            //TODO fill in the tea list here
-        }
+
+        Tea english = new Tea();
+        english.setmName("English Breakfast");
+        english.setmType("Black");
+        english.setmRegion("China");
+        mblackTeas.add(english);
+        mchinaTeas.add(english);
+
+
+        Tea kenyan = new Tea();
+        kenyan.setmName("Kenyan");
+        kenyan.setmType("Black");
+        kenyan.setmRegion("Kenya");
+        mblackTeas.add(kenyan);
+
+
+        Tea irish = new Tea();
+        irish.setmName("Irish Breakfast");
+        irish.setmRegion("China");
+        irish.setmType("Black");
+        mblackTeas.add(irish);
+        mchinaTeas.add(irish);
+
+        Tea sencha = new Tea();
+        sencha.setmName("Sencha");
+        sencha.setmType("Green");
+        sencha.setmRegion("Japan");
+        mgreenTeas.add(sencha);
+        
+
+
+
     }
 
-    public List<Tea> getTeas() {
-        return mTeas;
+
+    public List<Tea> getmBlackTeas() {
+        return mblackTeas;
+    }
+    public List<Tea> getmGreenTeas() {
+        return mgreenTeas;
+    }
+
+    public List<Tea> getmchinaTeas() {
+        return mchinaTeas;
     }
 
     public Tea getTeas(UUID id) {
-        for (Tea tea : mTeas) {
+        for (Tea tea : mgreenTeas) {
             if (tea.getmId().equals(id)) {
                 return tea;
             }

@@ -16,7 +16,7 @@ public class Region extends AppCompatActivity {
     }
 
     protected void teaChina(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
+        Intent intent = new Intent(this, ChinaTeaListActivity.class);
         startActivity(intent);
     }
 

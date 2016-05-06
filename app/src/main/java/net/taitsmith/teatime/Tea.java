@@ -4,6 +4,7 @@ import java.util.UUID;
 
 /**
  * Created by taits on 03-May-16.
+ * The actual tea object that populates list items
  */
 public class Tea {
     private UUID mId;

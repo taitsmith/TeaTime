@@ -1,9 +1,7 @@
 package net.taitsmith.teatime;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,11 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.List;
+
 /**
  * Created by taits on 02-May-16.
+ * Does all the work of finding and populating
+ * the recyclerview fragment. Can't be actively
+ * called because it's a fragment, calls must go
+ * through BlackTeaListActivity.
  */
-public class TeaListFragment extends Fragment{
+
+//TODO make this BlackTeaListFragment by changing List<Tea> tea to .getblackTeas
+public class ChinaTeaListFragment extends Fragment{
     private RecyclerView mTeaRecyclerView; //recycler to create list
     private TeaAdapter mAdapter; /*adapter takes from array via holder
                                   *and puts into recyler view to fill out
@@ -37,10 +43,13 @@ public class TeaListFragment extends Fragment{
 
     private void updateUI() {
         TeaLab teaLab = TeaLab.get(getActivity());
-        List<Tea> teas = teaLab.getTeas();
+        List<Tea> teas = teaLab.getmchinaTeas();
+
 
         mAdapter = new TeaAdapter(teas);
         mTeaRecyclerView.setAdapter(mAdapter);
+
+        //TODO selectively populate tealist by List<> methods?
     }
 
     private class TeaHolder extends RecyclerView.ViewHolder

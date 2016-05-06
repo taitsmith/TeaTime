@@ -32,7 +32,7 @@
         android:id="@+id/green_tea_button"
         android:text="@string/tea_green"
         android:layout_below="@+id/white_tea_button"
-        android:onClick="teaBlack"
+        android:onClick="teaGreen"
         />
 
     <Button

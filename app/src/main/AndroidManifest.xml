@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".Region" />
         <activity android:name=".Type" />
-        <activity android:name=".TeaListActivity" />
+        <activity android:name=".BlackTeaListActivity" />
+        <activity android:name=".GreenTeaListActivity" />
+        <activity android:name=".ChinaTeaListActivity" />
 
 
             

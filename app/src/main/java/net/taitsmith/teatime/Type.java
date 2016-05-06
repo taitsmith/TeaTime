@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class Type extends AppCompatActivity {
@@ -25,8 +24,13 @@ public class Type extends AppCompatActivity {
     }
 
     public void teaBlack(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
+        Intent intent = new Intent(this, BlackTeaListActivity.class);
         startActivity(intent);
         }
+
+    public void teaGreen(View view) {
+        Intent intent = new Intent(this, GreenTeaListActivity.class);
+        startActivity(intent);
+    }
 }
 //TODO update methods once list is fixed
