@@ -1,5 +1,6 @@
 package net.taitsmith.teatime;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,11 +18,10 @@ import java.util.List;
  * Does all the work of finding and populating
  * the recyclerview fragment. Can't be actively
  * called because it's a fragment, calls must go
- * through BlackTeaListActivity.
+ * through TeaListActivity.
  */
 
-//TODO make this BlackTeaListFragment by changing List<Tea> tea to .getblackTeas
-public class ChinaTeaListFragment extends Fragment{
+public class TeaListFragment extends Fragment{
     private RecyclerView mTeaRecyclerView; //recycler to create list
     private TeaAdapter mAdapter; /*adapter takes from array via holder
                                   *and puts into recyler view to fill out
@@ -42,16 +42,46 @@ public class ChinaTeaListFragment extends Fragment{
     }
 
     private void updateUI() {
+        String teaId = (String) getActivity().getIntent()
+                .getSerializableExtra(Region.EXTRA_LIST_ID);
         TeaLab teaLab = TeaLab.get(getActivity());
-        List<Tea> teas = teaLab.getmchinaTeas();
+
+        if (teaId.equals("china")) {
+            List<Tea> teas = teaLab.getmchinaTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("black")) {
+            List<Tea> teas = teaLab.getmBlackTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("japan")) {
+            List<Tea> teas = teaLab.getmJapanTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("green")) {
+            List<Tea> teas = teaLab.getmGreenTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("india")) {
+            List<Tea> teas = teaLab.getmIndiaTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("africa")) {
+            List<Tea> teas = teaLab.getmAfricaTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        }
 
 
-        mAdapter = new TeaAdapter(teas);
-        mTeaRecyclerView.setAdapter(mAdapter);
+        /*TODO add else statements for missing lists (africa, india, white, oolong, other)
+         * possibly combine white/oolong into other?
+         * possibly add korea?
+         */
+        else Toast.makeText(getContext(), "Move along...", Toast.LENGTH_LONG).show();
 
-        //TODO selectively populate tealist by List<> methods?
+
+
     }
-
     private class TeaHolder extends RecyclerView.ViewHolder
         implements View.OnClickListener {
         private TextView mTeaNameView, mTeaTypeView, mTeaRegionView;
@@ -78,10 +108,9 @@ public class ChinaTeaListFragment extends Fragment{
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(
-                    getContext(),
-                    "This doesn't do anything ",
-                    Toast.LENGTH_LONG).show();
+            Intent intent = TeaActivity.newIntent(getActivity(), mTea.getmId());
+            startActivity(intent);
+
         }
     }
 

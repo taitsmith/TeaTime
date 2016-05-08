@@ -14,5 +14,8 @@
     <string name="tea_oolong">oolong teas</string>
     <string name="tea_other">other teas</string>
     <string name="back_button">back</string>
+    <string name="tea_desc">Fake stuff about a fake tea, \nThis is pretty interesting
+                right? \nNo not really, just filling up space. \nHow much space does
+                this take up?</string>
 
 </resources>

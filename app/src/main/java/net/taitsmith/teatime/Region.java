@@ -1,5 +1,6 @@
 package net.taitsmith.teatime;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,20 +15,47 @@ public class Region extends AppCompatActivity {
         setContentView(R.layout.activity_region);
         Toast.makeText(this, "Choose a region", Toast.LENGTH_LONG).show();
     }
+    public static final String EXTRA_LIST_ID =
+            "net.taitsmith.teatime.switch_id";
+    public static Intent newIntent(Context packageContext, String switchId) {
+        Intent intent = new Intent(packageContext, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, switchId);
+        return intent;
+    }
 
-    protected void teaChina(View view) {
-        Intent intent = new Intent(this, ChinaTeaListActivity.class);
+    public void teaChina(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "china");
         startActivity(intent);
     }
 
-    //TODO add other region methods
-
-    public void mainMenu(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+    protected void teaIndia(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "india");
         startActivity(intent);
     }
+
+    protected void teaJapan(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "japan");
+        startActivity(intent);
+    }
+
+    protected void teaAfrica(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "africa");
+        startActivity(intent);
+    }
+
+    protected void teaOther(View view) {
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "otherRegion");
+        startActivity(intent);
+    }
+
     public void teaByType(View view) {
         Intent intent = new Intent(this, Type.class);
         startActivity(intent);
     }
+
 }

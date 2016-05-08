@@ -4,11 +4,20 @@ import java.util.UUID;
 
 /**
  * Created by taits on 03-May-16.
- * The actual tea object that populates list items
+ * Creates and sets all relevant tea data
  */
 public class Tea {
     private UUID mId;
-    private String mName, mType, mRegion;
+    private String mName, mType, mRegion, mDirections, mDescription;
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
+
 
     public Tea() {
         mId = UUID.randomUUID();
@@ -41,5 +50,15 @@ public class Tea {
     public void setmRegion(String mRegion) {
         this.mRegion = mRegion;
     }
+
+    public String getmDirections() {
+        return mDirections;
+    }
+
+    public void setmDirections(String mDirections) {
+        this.mDirections = mDirections;
+    }
+
+
 }
 
