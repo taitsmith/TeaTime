@@ -17,5 +17,19 @@
     <string name="tea_desc">Fake stuff about a fake tea, \nThis is pretty interesting
                 right? \nNo not really, just filling up space. \nHow much space does
                 this take up?</string>
+    <string name="gpg_desc">Chinese green tea from the Zhejiang province in eastern China.
+        Its English name comes from the fact that the tightly rolled pellets resemble gunpowder.
+        The rolling of the leaves helps prevent physical damage and breaking, as well as
+        maintaining much of the flavour that would otherwise be lost.\n\nWhen purchasing
+        gunpowder green tea, a shinier leaf is often representative of a fresher tea. Smaller
+        pellet size is also a sign of higher-quality tea.</string>
+    <string name="dw_desc">Also known as Lung Ching or Longjing. Chinese green tea from the
+        Zhejiang province in eastern China. Leaves are pan-roasted shortly after picking to
+        produce a smooth, floral flavour with a slightly toast aftertaste. For the true tea
+        drinker, Dragonwell tea is produced only in the Hangzhou region of the Zhejiang province,
+        though most will accept tea produced anywhere in the province as Dragonwell. An experienced
+        drinker may be able to spot the difference, although it is not immediately noticeable in
+        many cases. \n\nWhen purchasing Longjing tea, be sure to look for a region or area of origin
+        if it is claimed to be authentic.</string>
 
 </resources>

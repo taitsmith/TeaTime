@@ -8,16 +8,16 @@ import java.util.UUID;
  */
 public class Tea {
     private UUID mId;
-    private String mName, mType, mRegion, mDirections, mDescription;
+    private String mName, mType, mRegion, mDirections;
+    private int mDesc;
 
-    public String getmDescription() {
-        return mDescription;
+    public int getmDesc() {
+        return mDesc;
     }
 
-    public void setmDescription(String mDescription) {
-        this.mDescription = mDescription;
+    public void setmDesc(int mDesc) {
+        this.mDesc = mDesc;
     }
-
 
     public Tea() {
         mId = UUID.randomUUID();

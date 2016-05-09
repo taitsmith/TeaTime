@@ -13,7 +13,7 @@ import java.util.UUID;
  */
 public class TeaFragment extends android.support.v4.app.Fragment {
     private Tea mTea;
-    private TextView teaName, teaDescription, teaType, teaRegion, teaDirections;
+    private TextView teaName, teaType, teaRegion, teaDirections, teaDescription;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,11 @@ public class TeaFragment extends android.support.v4.app.Fragment {
         teaName.setText(mTea.getmName());
 
         teaDescription = (TextView)v.findViewById(R.id.tea_description_text_view);
-        if(mTea.getmDescription() == null) {
-            teaDescription.setText("Dangit, Ron. Something went wrong.");
-        } else teaDescription.setText(mTea.getmDescription());
+        if(mTea.getmDesc() == 0) {
+            mTea.setmDesc(R.string.tea_desc);
+        } else
+        teaDescription.setText(mTea.getmDesc());
+
 
         teaType = (TextView)v.findViewById(R.id.tea_type_text_view);
         teaType.setText(mTea.getmType());

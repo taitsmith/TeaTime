@@ -1,10 +1,10 @@
 package net.taitsmith.teatime;
 
 import android.content.Context;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 
 /**
  * Created by taits on 03-May-16.
@@ -38,19 +38,17 @@ public class TeaLab {
         //TODO update all .add methods once classes have been created
         Tea assam = new Tea();
         assam.setmName("Assam");
-        assam.setmRegion("China");
+        assam.setmRegion("India");
         assam.setmType("Black");
         assam.setmDirections("212 for three minutes");
-        assam.setmDescription("It's tea. It's pretty much just a plant's bath water.");
         mblackTeas.add(assam);
-        mchinaTeas.add(assam);
+        mindiaTeas.add(assam);
         mTeas.add(assam);
 
         Tea bdp = new Tea();
         bdp.setmName("Black Dragon Pearls");
         bdp.setmType("Black");
         bdp.setmRegion("China");
-        bdp.setmDescription("Looks like balls, man");
         mchinaTeas.add(bdp);
         mblackTeas.add(bdp);
         mTeas.add(bdp);
@@ -61,14 +59,23 @@ public class TeaLab {
         ceylon.setmType("Black");
         mblackTeas.add(ceylon);
         mafricaTeas.add(ceylon);
-        mTeas.add(ceylon);
+        mTeas.add(ceylon);                      //TODO change description to <string> desc
+
+        Tea dw = new Tea();
+        dw.setmName("Dragonwell");
+        dw.setmRegion("China");
+        dw.setmType("Green");
+        dw.setmDirections("75-80c for 60 seconds");
+        dw.setmDesc(R.string.dw_desc);
+        mTeas.add(dw);
+        mchinaTeas.add(dw);
+        mgreenTeas.add(dw);
 
 
         Tea earlgrey = new Tea();
         earlgrey.setmName("Earl Grey");
         earlgrey.setmRegion("China");
         earlgrey.setmType("Black");
-        earlgrey.setmDescription("Tea.\nEarl Grey.\nHot.");
         mblackTeas.add(earlgrey);
         mchinaTeas.add(earlgrey);
         mTeas.add(earlgrey);
@@ -100,6 +107,8 @@ public class TeaLab {
         gpg.setmName("Gundpowder Green");
         gpg.setmType("Green");
         gpg.setmRegion("China");
+        gpg.setmDirections("70c for 60 seconds");
+        gpg.setmDesc(R.string.gpg_desc);
         mchinaTeas.add(gpg);
         mgreenTeas.add(gpg);
         mTeas.add(gpg);
