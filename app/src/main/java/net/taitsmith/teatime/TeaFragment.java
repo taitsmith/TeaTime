@@ -1,6 +1,7 @@
 package net.taitsmith.teatime;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ public class TeaFragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         UUID teaId = (UUID) getActivity().getIntent()
-                .getSerializableExtra(TeaActivity.EXTRA_TEA_ID);
+                .getSerializableExtra(TeaActivity.EXTRA_TEA_ID); //gets the id string from button press
         mTea = TeaLab.get(getActivity()).getTeas(teaId);
     }
 
@@ -32,7 +33,8 @@ public class TeaFragment extends android.support.v4.app.Fragment {
         teaName.setText(mTea.getmName());
 
         teaDescription = (TextView)v.findViewById(R.id.tea_description_text_view);
-        if(mTea.getmDesc() == 0) {
+        teaDescription.setMovementMethod(new ScrollingMovementMethod());
+        if(mTea.getmDesc() == 0) { //dummy text if a description hasn't been written
             mTea.setmDesc(R.string.tea_desc);
         } else
         teaDescription.setText(mTea.getmDesc());
@@ -45,7 +47,7 @@ public class TeaFragment extends android.support.v4.app.Fragment {
         teaRegion.setText(mTea.getmRegion());
 
         teaDirections = (TextView)v.findViewById(R.id.tea_directions_text_view);
-        if(mTea.getmDirections() == null) {
+        if(mTea.getmDirections() == null) { //more dummy text
             teaDirections.setText("Oops. Nothing to see here");
         } else teaDirections.setText(mTea.getmDirections());
 

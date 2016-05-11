@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/tea_fragment">
+    android:id="@+id/tea_fragment"
+    android:background="@color/colorPrimaryDark">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
 
 
         <TextView
@@ -17,7 +18,8 @@
             android:text="Fake Tea Name"
             android:id="@+id/tea_name_textview"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:paddingLeft="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +29,8 @@
             android:id="@+id/tea_type_text_view"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:paddingRight="8dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +40,8 @@
             android:id="@+id/tea_region_text_view"
             android:layout_below="@id/tea_type_text_view"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:paddingRight="8dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,17 +51,26 @@
             android:id="@+id/tea_directions_text_view"
             android:layout_alignBottom="@+id/tea_region_text_view"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:paddingLeft="8dp"/>
+
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/tea_desc"
             android:id="@+id/tea_description_text_view"
-            android:layout_below="@+id/tea_region_text_view"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="44dp" />
+            android:layout_below="@id/tea_directions_text_view"
+            android:layout_marginTop="44dp"
+            android:scrollbars="vertical"
+            android:background="@color/colorPrimary"
+            android:padding="16dp"
+            android:textSize="14sp"
+            />
+
     </RelativeLayout>
+
 
 </RelativeLayout>

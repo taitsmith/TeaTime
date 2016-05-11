@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.support.v4.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
-    private Button mRegionButton;
-    private Button mTypeButton;
 
 
     @Override
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    //TODO add an info menu to display basic info about teas etc
 
 
 

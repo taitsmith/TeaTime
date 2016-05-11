@@ -6,7 +6,7 @@ import java.util.UUID;
  * Created by taits on 03-May-16.
  * Creates and sets all relevant tea data
  */
-public class Tea {
+public class Tea { //tea object used to populate <Tea> list
     private UUID mId;
     private String mName, mType, mRegion, mDirections;
     private int mDesc;

@@ -5,16 +5,15 @@
     <string name="type_button">type</string>
     <string name="japan_button">japan</string>
     <string name="china_button">china</string>
-    <string name="africa_button">africa</string>
+    <string name="africa_button">africa/india</string>
     <string name="india_button">india</string>
     <string name="other_region_button">other</string>
     <string name="tea_black">black teas</string>
-    <string name="tea_white">white teas</string>
+    <string name="tea_white_oolong">white teas/oolong teas</string>
     <string name="tea_green">green teas</string>
-    <string name="tea_oolong">oolong teas</string>
     <string name="tea_other">other teas</string>
     <string name="back_button">back</string>
-    <string name="tea_desc">Fake stuff about a fake tea, \nThis is pretty interesting
+    <string name="tea_desc">Fake stuff about a tea, \nThis is pretty interesting
                 right? \nNo not really, just filling up space. \nHow much space does
                 this take up?</string>
     <string name="gpg_desc">Chinese green tea from the Zhejiang province in eastern China.
@@ -25,11 +24,121 @@
         pellet size is also a sign of higher-quality tea.</string>
     <string name="dw_desc">Also known as Lung Ching or Longjing. Chinese green tea from the
         Zhejiang province in eastern China. Leaves are pan-roasted shortly after picking to
-        produce a smooth, floral flavour with a slightly toast aftertaste. For the true tea
-        drinker, Dragonwell tea is produced only in the Hangzhou region of the Zhejiang province,
-        though most will accept tea produced anywhere in the province as Dragonwell. An experienced
-        drinker may be able to spot the difference, although it is not immediately noticeable in
-        many cases. \n\nWhen purchasing Longjing tea, be sure to look for a region or area of origin
-        if it is claimed to be authentic.</string>
+        produce a smooth, floral flavour with a slightly toast aftertaste. In the most strictly
+        authentic definition, true dragonwell tea comes only from the one area in the Hangzhou region
+        of the Zhejiang province. A majority of dragonwell tea comes from other regions of the province,
+        with a smaller amount being prepared with the same technique using leaves grown in other
+        areas. An experienced drinker may be able to spot the difference, although it is not
+        immediately noticeable in many cases. \n\nWhen purchasing Longjing tea, be sure to look for
+        a region or area of origin if it is claimed to be authentic.</string>
+    <string name="assam_desc">A traditional black tea from the Assam region of India, known as the
+        world\'s largest tea growing region. Assam teas are produced from a specific variety of the
+        tea plant, known as Camelia sinensis var assamica (a plant native to this region). This
+        variety is represented by a malty flavour and strong bright colour. Most tea blends labeled
+        as \'breakfast\' will contain Assam tea, and Irish breakfast is generally made of CTC
+        (finely shredded) Assam leaves. Compared to other Indian tea-growing regions, plantations
+        here are located closer to sea level, with other regions generally being located in the
+        highlands. The geography here, combined with the large amount of rainfall and high temperatures
+        contribute to Assam\'s characteristic malty flavour.\n\n\ It is worth noting some fun facts
+        about the Assam plant and region- Tea plantations in the region are in a separate time zone
+        from the rest of Indian Standard Time. Known as Tea Garden Time, it is one hour ahead of the
+        IST. The region is also one of two in the world with a native tea plant, the other being
+        southern China. The Assam plant was first introduced to the west by a Scotsman, Robert Bruce
+        in the 1820s.</string>
+    <string name="bdp_desc">A fragrant tea from the Yunnan province in southern China. Hand-rolled
+        tippy black tea leaves produce a malty flavour with some hints of chocolate. Dragon pearls
+        are generally rolled with very high quality leaves and buds to produce a full bodied cup.
+        These leaves are capable of producing multiple steeps while maintaining much of the original
+        flavour.</string>
+    <string name="ceylon_desc">Ceylon teas vary depending on the altitude at which plants are grown.
+        Plants grown at the lowest elevation are bolder, mid elevation are less bold but with a more
+        rich flavour. Teas grown at the highest elevation are generally smooth with floral notes.
+        The high-grown teas are considered to be the finest the area produces, though any authentic
+        Ceylon tea is seen as high quality. These teas will carry the \'lion logo\', a highly
+        practice which is highly regulated by the Sri Lanka Tea Board. Any tea with this logo has
+        been thoroughly inspected to guarantee quality.
+        \n\nThe three distinct regions of tea production are the Upcountry (Udarata), Mid country
+        (Medarata) and Low country (Pahatha rata). </string>
+    <string name="eg_desc">Traditionally a Chinese black tea flavoured with
+        bergamot oil to produce a citrusy taste similar to many expensive Chinese teas. The origin
+        of the blend varies based on different sources, though it is commonly accepted that it is
+        named after Charles Grey, a Prime Minister of England in the 1830s. One story claims that
+        Lord Grey once saved a Mandarin man from drowning. The man was so grateful he presented the
+        tea as a gift.\n\nEarl Grey is the drink of choice for Captain Picard of the Federation
+        starship Enterprise.</string>
+    <string name="eb_desc">Traditionally a blend of Assam, Ceylon and Kenyan teas. The combination
+        produces a strong, rich full-bodied drink often mixed with milk and sugar.\n\n A fun fact on
+        English breakfast- the blend and name is considered to have originated not in England, but in
+        colonial America around 1843.</string>
+    <string name="gen_desc">Often colloquially referred to as \'popcorn tea\'. A Japanese green tea
+        combined with toasted rice. During the roasting process, pieces of rice can pop, and end up
+        resembling popcorn. The rice lends smooth flavour with a nutty aftertaste. The blend was
+        originally drunk by Japanese peasants, the toasted rice acting as a filler to allow expensive
+        tea to last longer. While most green teas are steeped in cooler water for a shorter period
+        of time, genmaicha is best prepared with hot water. </string>
+    <string name="dar_desc">The Darjeeling region is one of two major tea producing areas in the
+        country (the other being Assam). Unlike the Assam region which has it\'s own native plant,
+        the Darjeeling region uses the traditional Chinese variant of the tea plant. Darjeeling teas
+        generally produce a floral, fruity cup. These are often referred to as the \'champagne of
+        tea\'. There are several distinct types of Darjeeling teas, each with their own characteristics:
+        \n\nFirst Flush: harvested mid-March following spring rains. Produces a very light cup with a
+        mild aroma. Often fruity, peachy with a honey aftertaste.
+        \n\nSecond Flush: harvested from the same plants in June, produces a darker, more full-bodied
+        cup. Citrusy, crisp with an apricot aftertaste.
+        \n\nAutumnal Flush: harvested at the end of the rainy season in autumn. Full bodied, fruity
+        aftertaste.
+        \n\nWhile most Darjeeling teas were traditionally black, it is becoming more common to see
+        whites and oolongs produced as well.</string>
+    <string name="gyo_desc">Traditionally shade-grown Japanese tea, one of the highest grades the
+        country produces. Though categorised as a type of sencha, the plants that produce gyokuro
+        are protected from the sun for two to three weeks prior to the harvest. Those that produce
+        sencha are left uncovered. The shade serves to increase the caffeine content of the leaf,
+        also creating a sweeter flavour and fresher aroma when compared to traditional sencha. Gyokuro
+        is also steeped differently than most other green teas- at about 60 degrees celsius for 90
+        seconds. A larger amount of leaves are generally used as well.
+        \n\nAbout 40% of gyokuro produced in Japan comes from the city of Yame.</string>
+    <string name="hoj_desc">Unlike other Japanese green teas, hojicha is a roasted version of sencha.
+        Traditionally the roasting was done in porcelain pots over charcoal, but much modern hojicha
+        is roasted in electric drums similar to the coffee roasting process. This roasting alters the
+        colour from green to a reddish-brown and gives a toasty, caramel-like flavour. The firing
+        also reduces the caffeine content of the tea, making it a popular after dinner drink.
+    </string>
+    <string name="ib_desc">Irish breakfast is most commonly made of finely shredded Assam teas.
+        It produces a very strong cup of dark red to brown colour. Milk and sugar are typically
+        added though it can be consumed plain. </string>
+    <string name="keemun_desc">Famous black tea from the Anhui province Eastern China. Produces a
+        smooth, semi-sweet cup with hints of smokiness. It was first produced around 1875 and very
+        quickly became popular in the west, where it can still be found combined with Assam and
+        other black teas in blends like English breakfast. It is grown in a mountainous area at
+        lower temperatures with a high humidity, contributing to its characteristic taste.
+    \n\nThe most common type of Keemun is the Mao Feng variety. Harvested earlier in the year, it
+        produces a sweeter, lighter tea than other varieties.
+    \n\nThe Hao Ya variety, harvested later, lends itself to a much stronger tea.</string>
+    <string name="ctc_desc">Finely shredded version of classic Kenyan tea. Similar to Irish breakfast,
+        produces a strong, dark cup typically consumed with milk and sugar. CTC Kenyan teas are
+        often used in blends with tea from India or China.</string>
+    <string name="kenyan_desc">Tea was first cultivated in Kenya around 1904 using plants from India.
+        Teas grown here typically produce a rich, dark red cup. Farms in Kenya are set at a
+        high altitude where the climate is much less arid than closer to sea level. A large majority
+        of tea produced here ends up in black tea blends or processed in the crush, tear, curl method
+        (similar to Assam in Irish breakfast). Kenya is the fourth-largest worldwide producer of tea,
+        90% of which is grown on small farming operations as opposed to large plantations.</string>
+    <string name="yun_desc">Sometimes referred to as Dianhong, a typically high-end black tea from
+        southern China. Yunnan teas from other Chinese black teas, as they often contain many more
+        \'golden tips\' and fine buds. Most Yunnan teas will produce a dark orange cup with sweet
+        aroma and slightly malty taste. The area produces several varieties dating back to the early
+        19th century:
+    \n\nYunnan Pure Gold: considered to be the finest tea grown in the region. Typically contains only
+        golden tips, and when brewed creates a bright red cup with a sweet taste.
+    \n\nYunnan Gold: contains fewer buds than its Pure Gold cousin. Brews to a brassy red colour,
+        slightly less sweet than Pure Gold.
+    \n\nBroken Yunnan: low-end Yunnan tea, most often bitter on its own and added to blends. Brews a
+        dark red-brown cup and contains few to no golden tips.</string>
+    <string name="kuk_desc">Highly popular Japanese green tea. Produced largely from the stems and
+        stalks of the tea plants used to create sencha, it has a naturally low caffeine content when
+        compared to other green teas. Produces a very fresh vegetable taste, slightly nutty and
+        creamy. Brews to a light green colour somewhere between sencha and gyokuro. Unlike most other
+        teas, kukicha is commonly steeped three or four times while maintaining most of its flavour.</string>
+    <string name="ls_desc"></string>
 
 </resources>

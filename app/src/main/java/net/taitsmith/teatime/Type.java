@@ -45,17 +45,5 @@ public class Type extends AppCompatActivity {
         intent.putExtra(EXTRA_LIST_ID, "white");
         startActivity(intent);
     }
-    public void teaOolong(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
-        intent.putExtra(EXTRA_LIST_ID, "oolong");
-        startActivity(intent);
-    }
-
-    public void teaOther(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
-        intent.putExtra(EXTRA_LIST_ID, "otherType");
-        startActivity(intent);
-    }
-
 
 }

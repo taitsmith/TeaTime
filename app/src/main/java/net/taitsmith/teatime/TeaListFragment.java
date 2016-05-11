@@ -62,12 +62,12 @@ public class TeaListFragment extends Fragment{
             List<Tea> teas = teaLab.getmGreenTeas();
             mAdapter = new TeaAdapter(teas);
             mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("india")) {
-            List<Tea> teas = teaLab.getmIndiaTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
         } else if (teaId.equals("africa")) {
             List<Tea> teas = teaLab.getmAfricaTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else {
+            List<Tea> teas = teaLab.getmTeas();
             mAdapter = new TeaAdapter(teas);
             mTeaRecyclerView.setAdapter(mAdapter);
         }
@@ -77,7 +77,7 @@ public class TeaListFragment extends Fragment{
          * possibly combine white/oolong into other?
          * possibly add korea?
          */
-        else Toast.makeText(getContext(), "Move along...", Toast.LENGTH_LONG).show();
+
 
 
 

@@ -29,19 +29,13 @@ public class Region extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void teaIndia(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
-        intent.putExtra(EXTRA_LIST_ID, "india");
-        startActivity(intent);
-    }
-
     protected void teaJapan(View view) {
         Intent intent = new Intent(this, TeaListActivity.class);
         intent.putExtra(EXTRA_LIST_ID, "japan");
         startActivity(intent);
     }
 
-    protected void teaAfrica(View view) {
+    protected void teaAfrica(View view) { //africa list includes india now
         Intent intent = new Intent(this, TeaListActivity.class);
         intent.putExtra(EXTRA_LIST_ID, "africa");
         startActivity(intent);
