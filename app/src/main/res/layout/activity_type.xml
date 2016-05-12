@@ -7,55 +7,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="4dp"
-    tools:context="net.taitsmith.teatime.Type">
+    tools:context="net.taitsmith.teatime.Type"
+    android:background="@color/colorPrimary">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/black_tea_button"
         android:text="@string/tea_black"
+        android:onClick="teaBlack"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="8dp"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/white_tea_button"
-        android:text="@string/tea_white"
+        android:text="@string/tea_white_oolong"
         android:layout_below="@+id/black_tea_button"
+        android:onClick="teaWhite"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="8dp"
         />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/green_tea_button"
         android:text="@string/tea_green"
         android:layout_below="@+id/white_tea_button"
+        android:onClick="teaGreen"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="8dp"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/oolong_tea_button"
-        android:text="@string/tea_oolong"
-        android:layout_below="@+id/green_tea_button"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/other_tea_button"
-        android:text="@string/tea_other"
-        android:layout_below="@+id/oolong_tea_button"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back_button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="mainMenu"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="choose by region"
-        android:onClick="teaByRegion"/>
+        android:onClick="teaByRegion"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"/>
 
 </RelativeLayout>
+
+<!-- TODO fit on smaller screens -->

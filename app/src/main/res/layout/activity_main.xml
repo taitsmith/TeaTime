@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="net.taitsmith.teatime.MainActivity">
+    tools:context="net.taitsmith.teatime.MainActivity"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +18,8 @@
         android:text="@string/welcome_text"
         android:textAllCaps="true"
         android:textSize="18dp"
-        android:id="@+id/find_by"/>
+        android:id="@+id/find_by"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -26,7 +28,8 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/region_button"
         android:text="@string/region_button"
-        android:onClick="teaByRegion"/>
+        android:onClick="teaByRegion"
+        android:background="@color/colorPrimaryDark"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +37,9 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/type_button"
         android:text="@string/type_button"
-        android:onClick="teaByType"/>
+        android:onClick="teaByType"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="8dp"/>
 
 
 </RelativeLayout>
