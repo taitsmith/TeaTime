@@ -41,6 +41,8 @@ public class TeaListFragment extends Fragment{
         return view;
     }
 
+
+    //TODO update to switch
     private void updateUI() {
         String teaId = (String) getActivity().getIntent()
                 .getSerializableExtra(Region.EXTRA_LIST_ID);
@@ -66,6 +68,10 @@ public class TeaListFragment extends Fragment{
             List<Tea> teas = teaLab.getmAfricaTeas();
             mAdapter = new TeaAdapter(teas);
             mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("otherRegion")) {
+            List<Tea> teas = teaLab.getmotherRegionTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
         } else {
             List<Tea> teas = teaLab.getmTeas();
             mAdapter = new TeaAdapter(teas);
@@ -77,9 +83,6 @@ public class TeaListFragment extends Fragment{
          * possibly combine white/oolong into other?
          * possibly add korea?
          */
-
-
-
 
     }
     private class TeaHolder extends RecyclerView.ViewHolder

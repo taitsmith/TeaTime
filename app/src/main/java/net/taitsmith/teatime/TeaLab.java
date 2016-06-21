@@ -1,6 +1,8 @@
 package net.taitsmith.teatime;
 
 import android.content.Context;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -13,6 +15,7 @@ import java.util.UUID;
  * and called by TeaListActivity when buttons are pressed
  */
 public class TeaLab {
+    private final String LOG_TAG = "LOG";
     private static TeaLab sTeaList;
     public List<Tea> mwhiteTeas, moolongTeas, motherRegionTeas, mchinaTeas, mafricaTeas,
                         mjapanTeas, motherTypeTeas, mblackTeas, mgreenTeas, mTeas;
@@ -34,6 +37,7 @@ public class TeaLab {
         mTeas = new ArrayList<>();
         mjapanTeas = new ArrayList<>();
         mafricaTeas = new ArrayList<>();
+        motherRegionTeas = new ArrayList<>();
 
 
         Tea assam = new Tea();
@@ -157,6 +161,15 @@ public class TeaLab {
         mafricaTeas.add(irish);
         mTeas.add(irish);
 
+        Tea jax = new Tea();
+        jax.setmName("Jaksul");
+        jax.setmType("Green");
+        jax.setmRegion("Korea");
+        jax.setmDirections("Don\'t");
+        mTeas.add(jax);
+        mgreenTeas.add(jax);
+        motherRegionTeas.add(jax);
+
         Tea keemun = new Tea();
         keemun.setmName("Keemun");
         keemun.setmType("Black");
@@ -202,7 +215,6 @@ public class TeaLab {
         lapsang.setmType("Black");
         lapsang.setmRegion("China");
         lapsang.setmDirections("100c for 2 to 3 minutes");
-        lapsang.setmDesc(R.string.ls_desc);
         mblackTeas.add(lapsang);
         mchinaTeas.add(lapsang);
         mTeas.add(lapsang);
@@ -211,6 +223,7 @@ public class TeaLab {
         lc.setmName("Lung Ching");
         lc.setmType("Green");
         lc.setmRegion("China");
+        lc.setmDirections("Farts");
         mchinaTeas.add(lc);
         mgreenTeas.add(lc);
         mTeas.add(lc);
@@ -224,9 +237,11 @@ public class TeaLab {
         mTeas.add(mpg);
 
         Tea plc = new Tea();
-        plc.setmName("Pi Lo Chun");
+        plc.setmName("Pi Luo Chun");
         plc.setmType("Green");
         plc.setmRegion("China");
+        plc.setmDirections("80c for 1 to 2 minutes");
+        plc.setmDesc(R.string.plc_desc);
         mchinaTeas.add(plc);
         mgreenTeas.add(plc);
         mTeas.add(plc);
@@ -234,6 +249,8 @@ public class TeaLab {
         Tea sencha = new Tea();
         sencha.setmName("Sencha");
         sencha.setmType("Green");
+        sencha.setmDirections("80c for 1 minute");
+        sencha.setmDesc(R.string.sencha_desc);
         sencha.setmRegion("Japan");
         mgreenTeas.add(sencha);
         mjapanTeas.add(sencha);
@@ -249,6 +266,8 @@ public class TeaLab {
         mblackTeas.add(yun);
         mTeas.add(yun);
 
+
+
     }
 
 
@@ -263,9 +282,8 @@ public class TeaLab {
     public List<Tea> getmGreenTeas() {
         return mgreenTeas;
     }
-    public List<Tea> getmchinaTeas() {
-        return mchinaTeas;
-    }
+    public List<Tea> getmchinaTeas() { return mchinaTeas; }
+    public List<Tea> getmotherRegionTeas() { return motherRegionTeas; }
 
     public Tea getTeas(UUID id) {
         for (Tea tea : mTeas) {

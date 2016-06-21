@@ -76,8 +76,8 @@
         originally drunk by Japanese peasants, the toasted rice acting as a filler to allow expensive
         tea to last longer. While most green teas are steeped in cooler water for a shorter period
         of time, genmaicha is best prepared with hot water. </string>
-    <string name="dar_desc">The Darjeeling region is one of two major tea producing areas in the
-        country (the other being Assam). Unlike the Assam region which has it\'s own native plant,
+    <string name="dar_desc">The Darjeeling region is one of two major tea producing areas in India
+        (the other being Assam). Unlike the Assam region which has it\'s own native plant,
         the Darjeeling region uses the traditional Chinese variant of the tea plant. Darjeeling teas
         generally produce a floral, fruity cup. These are often referred to as the \'champagne of
         tea\'. There are several distinct types of Darjeeling teas, each with their own characteristics:
@@ -139,6 +139,15 @@
         compared to other green teas. Produces a very fresh vegetable taste, slightly nutty and
         creamy. Brews to a light green colour somewhere between sencha and gyokuro. Unlike most other
         teas, kukicha is commonly steeped three or four times while maintaining most of its flavour.</string>
-    <string name="ls_desc"></string>
+    <string name="plc_desc">Pi Luo Chun is renowned for it\'s delicate and unique appearance. Curled
+        leaves resemble snail meat (the name literally translates to "green snail spring") and produce
+        a very strong aroma. The taste is somewhat fruity and floral. The smell can be off-putting at
+        first, and it\'s original name "scary fragrance" reflects this. Legend says the Kangxi Emperor
+        visited a village where the tea was produced and gave it the more appealing name by which it
+        is now known. Today, true Pi Luo Chun is cultivated in the Jiangsu province in eastern
+        China, though it can also be found in the Zhejian and Sichuan provinces. These teas are generally
+        a lower quality and contain larger leaves and produce a nuttier flavour.</string>
+    <string name="sencha_desc">Sencha is the most popular tea in Japan, usually representing about
+        80% of the country\'s tea production.</string>
 
 </resources>

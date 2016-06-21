@@ -13,7 +13,6 @@ public class Region extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_region);
-        Toast.makeText(this, "Choose a region", Toast.LENGTH_LONG).show();
     }
     public static final String EXTRA_LIST_ID =
             "net.taitsmith.teatime.switch_id";
