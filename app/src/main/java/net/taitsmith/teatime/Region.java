@@ -34,7 +34,7 @@ public class Region extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void teaAfrica(View view) { //africa list includes india now
+    protected void teaAfricaIndiaOther(View view) { //africa list includes india now
         Intent intent = new Intent(this, TeaListActivity.class);
         intent.putExtra(EXTRA_LIST_ID, "africa");
         startActivity(intent);
@@ -48,6 +48,12 @@ public class Region extends AppCompatActivity {
 
     public void teaByType(View view) {
         Intent intent = new Intent(this, Type.class);
+        startActivity(intent);
+    }
+
+    public void allTeas(View view){
+        Intent intent = new Intent(this, TeaListActivity.class);
+        intent.putExtra(EXTRA_LIST_ID, "allTeas");
         startActivity(intent);
     }
 
