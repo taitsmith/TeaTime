@@ -5,3 +5,5 @@ Users can select a tea from the list to see more information, including a descri
 for proper brewing temperatures and times. 
 
 Mainly created as a personal project to learn about RecyclerViews etc.
+
+//TODO possibly add a timer, create section to allow tasting notes, checkbox for 'tried it', etc.
