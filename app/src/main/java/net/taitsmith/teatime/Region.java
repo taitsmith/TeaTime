@@ -14,6 +14,8 @@ public class Region extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_region);
     }
+
+    //holds the data to determine which list of teas is displayed by the recyclerview
     public static final String EXTRA_LIST_ID =
             "net.taitsmith.teatime.switch_id";
     public static Intent newIntent(Context packageContext, String switchId) {
@@ -34,26 +36,14 @@ public class Region extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void teaAfricaIndiaOther(View view) { //africa list includes india now
+    protected void teaAfricaIndiaOther(View view) {
         Intent intent = new Intent(this, TeaListActivity.class);
         intent.putExtra(EXTRA_LIST_ID, "africa");
         startActivity(intent);
     }
 
-    protected void teaOther(View view) {
-        Intent intent = new Intent(this, TeaListActivity.class);
-        intent.putExtra(EXTRA_LIST_ID, "otherRegion");
-        startActivity(intent);
-    }
-
     public void teaByType(View view) {
         Intent intent = new Intent(this, Type.class);
-        startActivity(intent);
-    }
-
-    public void allTeas(View view){
-        Intent intent = new Intent(this, TeaListActivity.class);
-        intent.putExtra(EXTRA_LIST_ID, "allTeas");
         startActivity(intent);
     }
 

@@ -14,10 +14,9 @@ import java.util.UUID;
  * and called by TeaListActivity when buttons are pressed
  */
 public class TeaLab {
-    private final String LOG_TAG = "LOG";
     private static TeaLab sTeaList;
-    public List<Tea> mwhiteOolongTeas, moolongTeas, mchinaTeas, mafricaTeas,
-                        mjapanTeas, motherTypeTeas, mblackTeas, mgreenTeas, mTeas;
+    public List<Tea> mwhiteOolongTeas, moolongTeas, mchinaTeas, mafricaOtherTeas,
+                        mjapanTeas, mblackTeas, mgreenTeas, mTeas;
 
 
     public static TeaLab get(Context context) {
@@ -35,7 +34,7 @@ public class TeaLab {
         mchinaTeas = new ArrayList<>();
         mTeas = new ArrayList<>();
         mjapanTeas = new ArrayList<>();
-        mafricaTeas = new ArrayList<>(); //now  includes india and other regions
+        mafricaOtherTeas = new ArrayList<>(); //updated to include other regions
         moolongTeas = new ArrayList<>();
 
 
@@ -46,7 +45,7 @@ public class TeaLab {
         assam.setmDirections("90-95c for two minutes");
         assam.setmDesc(R.string.assam_desc);
         mblackTeas.add(assam);
-        mafricaTeas.add(assam);
+        mafricaOtherTeas.add(assam);
         mTeas.add(assam);
 
         Tea bdp = new Tea();
@@ -66,7 +65,7 @@ public class TeaLab {
         ceylon.setmDesc(R.string.ceylon_desc);
         ceylon.setmDirections("Varies");
         mblackTeas.add(ceylon);
-        mafricaTeas.add(ceylon);
+        mafricaOtherTeas.add(ceylon);
         mTeas.add(ceylon);
 
         Tea dhp = new Tea();
@@ -87,7 +86,7 @@ public class TeaLab {
         darjeeling.setmDirections("Varies");
         mTeas.add(darjeeling);
         mblackTeas.add(darjeeling);
-        mafricaTeas.add(darjeeling);
+        mafricaOtherTeas.add(darjeeling);
 
         Tea dw = new Tea();
         dw.setmName("Dragonwell");
@@ -167,7 +166,7 @@ public class TeaLab {
         irish.setmDirections("95c for 30 seconds");
         irish.setmDesc(R.string.ib_desc);
         mblackTeas.add(irish);
-        mafricaTeas.add(irish);
+        mafricaOtherTeas.add(irish);
         mTeas.add(irish);
 
         Tea jax = new Tea();
@@ -178,7 +177,7 @@ public class TeaLab {
         jax.setmDesc(R.string.jax_desc);
         mTeas.add(jax);
         mgreenTeas.add(jax);
-        mafricaTeas.add(jax);
+        mafricaOtherTeas.add(jax);
 
         Tea keemun = new Tea();
         keemun.setmName("Keemun");
@@ -197,7 +196,7 @@ public class TeaLab {
         ctc.setmDirections("95c for 30 seconds");
         ctc.setmDesc(R.string.ctc_desc);
         mblackTeas.add(ctc);
-        mafricaTeas.add(ctc);
+        mafricaOtherTeas.add(ctc);
         mTeas.add(ctc);
 
         Tea kenyan = new Tea();
@@ -207,7 +206,7 @@ public class TeaLab {
         kenyan.setmRegion("Africa");
         kenyan.setmDesc(R.string.kenyan_desc);
         mblackTeas.add(kenyan);
-        mafricaTeas.add(kenyan);
+        mafricaOtherTeas.add(kenyan);
         mTeas.add(kenyan);
 
         Tea kukicha = new Tea();
@@ -257,7 +256,7 @@ public class TeaLab {
         pou.setmDirections("95c for 3 minutes");
         pou.setmDesc(R.string.pou_desc);
         mwhiteOolongTeas.add(pou);
-        mafricaTeas.add(pou);
+        mafricaOtherTeas.add(pou);
         mTeas.add(pou);
 
         Tea sencha = new Tea();
@@ -357,16 +356,10 @@ public class TeaLab {
 
 
     public List<Tea> getmTeas() { return mTeas; }
-    public List<Tea> getmJapanTeas() {
-        return mjapanTeas;
-    }
-    public List<Tea> getmAfricaTeas(){ return mafricaTeas; }
-    public List<Tea> getmBlackTeas() {
-        return mblackTeas;
-    }
-    public List<Tea> getmGreenTeas() {
-        return mgreenTeas;
-    }
+    public List<Tea> getmJapanTeas() { return mjapanTeas; }
+    public List<Tea> getmAfricaTeas(){ return mafricaOtherTeas; }
+    public List<Tea> getmBlackTeas() { return mblackTeas; }
+    public List<Tea> getmGreenTeas() { return mgreenTeas; }
     public List<Tea> getmchinaTeas() { return mchinaTeas; }
     public List<Tea> getmWhiteTeas() { return mwhiteOolongTeas; }
 

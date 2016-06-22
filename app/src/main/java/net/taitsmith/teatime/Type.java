@@ -39,6 +39,8 @@ public class Type extends AppCompatActivity {
         intent.putExtra(EXTRA_LIST_ID, "green");
         startActivity(intent);
     }
+
+    //to save space, now includes oolong
     public void teaWhite(View view) {
         Intent intent = new Intent(this, TeaListActivity.class);
         intent.putExtra(EXTRA_LIST_ID, "white");

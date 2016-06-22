@@ -48,6 +48,13 @@ public class TeaListFragment extends Fragment{
                 .getSerializableExtra(Region.EXTRA_LIST_ID);
         TeaLab teaLab = TeaLab.get(getActivity());
 
+
+        /** long winded way of getting intent extra from either region menu or type menu.
+         *  intent includes a string with the name of the button selected (black teas, chinese
+         *  teas etc), which goes through the if-else-if to find the proper List<>, create the
+         *  adapter and set the adapter to the recycler view. Working on a way to simplify the code
+         *  most likely with a switch.
+         */
         if (teaId.equals("china")) {
             List<Tea> teas = teaLab.getmchinaTeas();
             mAdapter = new TeaAdapter(teas);
@@ -78,22 +85,19 @@ public class TeaListFragment extends Fragment{
             mTeaRecyclerView.setAdapter(mAdapter);
         }
 
-
-        /*TODO add else statements for missing lists (africa, india, white, oolong, other)
-         * possibly combine white/oolong into other?
-         * possibly add korea?
-         */
-
     }
 
     //creates the list item view
     private class TeaHolder extends RecyclerView.ViewHolder
         implements View.OnClickListener {
+
         private TextView mTeaNameView, mTeaTypeView, mTeaRegionView;
         private Tea mTea;
 
         public TeaHolder(View itemView) {
             super(itemView);
+
+            //because we want the items to be selectable
             itemView.setOnClickListener(this);
 
             mTeaNameView = (TextView)
