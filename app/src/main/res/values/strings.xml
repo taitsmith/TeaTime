@@ -5,7 +5,7 @@
     <string name="type_button">type</string>
     <string name="japan_button">japan</string>
     <string name="china_button">china</string>
-    <string name="africa_button">africa/india</string>
+    <string name="africa_button">africa/india/other</string>
     <string name="india_button">india</string>
     <string name="other_region_button">other</string>
     <string name="tea_black">black teas</string>
@@ -76,8 +76,8 @@
         originally drunk by Japanese peasants, the toasted rice acting as a filler to allow expensive
         tea to last longer. While most green teas are steeped in cooler water for a shorter period
         of time, genmaicha is best prepared with hot water. </string>
-    <string name="dar_desc">The Darjeeling region is one of two major tea producing areas in the
-        country (the other being Assam). Unlike the Assam region which has it\'s own native plant,
+    <string name="dar_desc">The Darjeeling region is one of two major tea producing areas in India
+        (the other being Assam). Unlike the Assam region which has it\'s own native plant,
         the Darjeeling region uses the traditional Chinese variant of the tea plant. Darjeeling teas
         generally produce a floral, fruity cup. These are often referred to as the \'champagne of
         tea\'. There are several distinct types of Darjeeling teas, each with their own characteristics:
@@ -139,6 +139,105 @@
         compared to other green teas. Produces a very fresh vegetable taste, slightly nutty and
         creamy. Brews to a light green colour somewhere between sencha and gyokuro. Unlike most other
         teas, kukicha is commonly steeped three or four times while maintaining most of its flavour.</string>
-    <string name="ls_desc"></string>
-
+    <string name="plc_desc">Pi Luo Chun is renowned for it\'s delicate and unique appearance. Curled
+        leaves resemble snail meat (the name literally translates to "green snail spring") and produce
+        a very strong aroma. The taste is somewhat fruity and floral. The smell can be off-putting at
+        first, and it\'s original name \'scary fragrance\' reflects this. Legend says the Kangxi Emperor
+        visited a village where the tea was produced and gave it the more appealing name by which it
+        is now known. Today, true Pi Luo Chun is cultivated in the Jiangsu province in eastern
+        China, though it can also be found in the Zhejian and Sichuan provinces. These teas are generally
+        a lower quality and contain larger leaves and produce a nuttier flavour.</string>
+    <string name="sencha_desc">Sencha is the most popular tea in Japan, usually representing about
+        80% of the country\'s tea production. The season for picking sencha leaves is typically from
+        early April to late May, with tea from the first flush being considered the most sought-after.
+        Production of sencha differs from Chinese green teas in that they are steamed for a short time
+        after picking, while Chinese teas are typically pan-fired first. Following the steaming, leaves
+        are rolled, shaped and dried which lends them a characteristic flat cylindrical shape. Steaming
+        has an impact on the final flavour of the tea, as well as the look- sencha tends to have a
+        slightly more bitter taste than it\'s Chinese relatives, as well a grassy, fresh vegetable taste.
+        Water temperature can have a slight effect on the final taste, but the colour will generally
+        be a greenish gold.</string>
+    <string name="ls_desc">Lapsang Souchong differs from other Chinese teas in that it is dried over
+        a (traditionally) pinewood fire. The drying and smoking leads to a a very distinct smoky
+        flavour with hints of whisky. According to some legends, lapsang souchong claims to be the
+        very first black tea, created when Chinese armies interrupted the annual drying of the tea leaves.
+        After the interruption, tea producers dried leaves over fires of local pine to speed the process.
+        The tea originated in the Wuyi Mountains of the Fujian province, though lapsang from this area
+        is becoming increasingly expensive as demand grows. Lapsang is also produced in Formosa (Taiwan).
+        Formosan lapsang generally produces a much stronger flavour and aroma. Tarry souchong, considered
+        to be the most extreme of the varieties, is smoked over pine tar.</string>
+    <string name="mpg_desc">Often referred to as \'golden monkey tea\', a black tea that originated
+        in the Fujian and Yunnan provinces. It typically consists of a single leaf and bud (hand-picked
+        and processed in spring), which resemble a monkey claw. The leaves are characterised by a pale gold colour,
+        producing a light cup with honey, peach notes and a lack of astringency. It is considered
+        one of the finest black teas available, and was a drink of choice among the upper class of
+        ancient China. It\'s rarity came with legends that it provided agility and sexual prowess. It
+        is typically grown at an altitude of 1200 metres.</string>
+    <string name="sn_desc">Commonly called Baihao Yinzhen, the most sought-after variety of white teas.
+        Only the top buds of the tea plant are used, with the best coming from first flushes in
+        late March or early April. Leaves are picked in the late morning, after the sun has dried
+        any leftover moisture. As white teas are lightly oxidised when compared to green or black
+        teas, true silver needle leaves are laid in baskets to dry in the sun for an extended time, though
+        many these days are done indoors. Silver needle tea produces a pale yellow cup with a sweet,
+        delicate fresh vegetable taste. </string>
+    <string name="jax_desc">A Korean green tea whose name translates to \'sparrow tongue\', a reflection
+        of the leaf\'s tendency to resemble one. The grading of jaksul leaves typically depends on
+        when in the season it is picked, as well as the size of the leaf. There are four main categories
+        of jaksul:
+    \n\nUjeon: picked before the first rainfall of spring. Generally considered the most special grade,
+        it consists of only the buds of the tea plan.
+    \n\nSe-jak: picked right after the first rainfall through spring, consisting of two leaves and the
+        bud taken from the tip of each branch.
+    \n\nJoong-jak: picked at the end of spring, this tea typically contains more mature leaves and
+        no buds.
+    \n\nDae-jak: picked throughout summer, usually machine harvested. These contain full-grown leaves
+        and occasional bits of branches.</string>
+    <string name="wp_desc">The literal translation of its Chinese name Bai Mudan, a Chinese white
+        tea from the Fujian province. Generally viewed
+        as having a stronger, fuller flavour than silver needle tea, the other main Chinese white tea.
+        Picked tea is allowed to wither in the sun, which may last anywhere from one to three days
+        depending on weather conditions. White peony produces a mild peony, floral aroma during the
+        brewing process. The resulting cup is a pale golden green colour with a fruity, grassy flavour
+        that is stronger than silver needle.</string>
+    <string name="sm_desc">A Chinese white tea typically produced in the Fujian or Guangxi provinces.
+        The tea consists of naturally withered upper leaves and tips that produce a a stronger cup
+        when compared to other Chinese whites. The leaves are picked later in the season which lends
+        a darker colour. It is considered to be of lower quality than other Chinese whites. When
+        brewed, the resulting cup is fruity and slightly sweet with a strong taste.</string>
+    <string name="dhp_desc">Literally \'big red robe\', a highly prized Chinese oolong from the Wuyi
+        mountains in the Fujian province. It is heavily oxidised, leading to a dark colour. Legends
+        say that when the mother of a Ming dynasty emperor was cured of illness by the tea, the emperor in
+        return sent several red robes to cover the plants that grew the tea. Several of these bushes
+        (reportedly dating back to around 960 CE) still exist today, and produce tea that can cost
+        upwards of one million USD per kilogram. Cuttings taken from these mother plants produce tea
+        of similar quality, with differences coming from the climate, soil and location in which it is
+        grown. Increased global demand has lead to the need for increased production. Authentic da hong
+        tea is generally served only to honour guests.</string>
+    <string name="sh_desc">Literally \'water sprite\', it is the darkest of the Mount Wuyi oolongs
+        from eastern China. The heavily oxidised tea brews to a dark brown with a sweet, honey-like
+        fragrance. Shui hsien (also sometimes shuixian) is grown elsewhere in China and even parts
+        of Taiwan, but these varieties are easily distinguished by their smoky, almost burnt taste.
+        Some plants producing shui hsien tea can be over 200 years old.</string>
+    <string name="sjg_desc">Literally \'golden marine turtle\', it is the lightest of the Wuyi oolong
+        teas. Less oxidisation leads to a lighter, greener leaf as well as a greener, fresher tasting
+        cup. Flavours include roasted nuts with a slight floral aftertaste.</string>
+    <string name="tie_desc">Literally \'iron warrior monk\', one of the four most famous Wuyi oolong
+        teas. On the lighter side of Wuyi teas, legends claim that it was created by a powerful
+        warrior monk (hence the name), and is characterised by an intense green colour. Brewing to a
+        lighter green cup, flavours are full-bodied and slightly floral.</string>
+    <string name="tgy_desc">Literally \'iron goddess of mercy\', an oolong from the Fujian province
+        of eastern China. It is named after the Chinese goddess of mercy, Guanyin. Legend says that a
+        scholar, Wang, discovered the tea beneath the Guanyin rock in Xiping. The emperor was so
+        impressed by the tea, he gave it the name Guanyin. There is a complex method of processing
+        for Tieguanyin teas that can be simplified down to eight steps- plucking, sun withering, cooling,
+        tossing, withering (this time with oxidising), fixation, rolling and drying. Different varieties
+        of Tieguanyin are determined largely by the time at which they are harvested or the extent to
+        which they are baked. Leaves harvested at the start of summer are generally regarded as the
+        highest quality. Most tieguanyin teas are \'thoroughly baked\', with some producers now
+        creating lightly baked teas. These lightly baked teas are considered closer to green tea
+        than oolong.</string>
+    <string name="pou_desc">A lightly oxidised oolong that is close to green tea. Pouchong originated
+        in the Fujian province in eastern China, and has been produced in Taiwan since the late 1800s.
+        The leaves tend to resemble curled rope with a dark green colour, and produce a floral cup
+        with a rich, sweet flavour. Pouchong leaves are picked and produced around the end of March.</string>
 </resources>

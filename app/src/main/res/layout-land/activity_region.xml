@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,7 +19,9 @@
         android:text="@string/japan_button"
         android:onClick="teaJapan"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +30,9 @@
         android:layout_below="@+id/japan_button"
         android:onClick="teaChina"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,8 +41,9 @@
         android:layout_below="@id/china_button"
         android:onClick="teaAfricaIndiaOther"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="8dp"/>
-
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -48,4 +55,7 @@
         android:background="@color/colorPrimaryDark"
         android:padding="8dp"/>
 
+
+
+    <!-- TODO fit on smaller screens, change padding on landscape layout-->
 </RelativeLayout>

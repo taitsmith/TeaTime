@@ -41,6 +41,8 @@ public class TeaListFragment extends Fragment{
         return view;
     }
 
+
+    //TODO update to switch
     private void updateUI() {
         String teaId = (String) getActivity().getIntent()
                 .getSerializableExtra(Region.EXTRA_LIST_ID);
@@ -66,8 +68,12 @@ public class TeaListFragment extends Fragment{
             List<Tea> teas = teaLab.getmAfricaTeas();
             mAdapter = new TeaAdapter(teas);
             mTeaRecyclerView.setAdapter(mAdapter);
-        } else {
+        } else if (teaId.equals("allTeas")){
             List<Tea> teas = teaLab.getmTeas();
+            mAdapter = new TeaAdapter(teas);
+            mTeaRecyclerView.setAdapter(mAdapter);
+        } else if (teaId.equals("white")) {
+            List<Tea> teas = teaLab.getmWhiteTeas();
             mAdapter = new TeaAdapter(teas);
             mTeaRecyclerView.setAdapter(mAdapter);
         }
@@ -78,10 +84,9 @@ public class TeaListFragment extends Fragment{
          * possibly add korea?
          */
 
-
-
-
     }
+
+    //creates the list item view
     private class TeaHolder extends RecyclerView.ViewHolder
         implements View.OnClickListener {
         private TextView mTeaNameView, mTeaTypeView, mTeaRegionView;
@@ -106,6 +111,7 @@ public class TeaListFragment extends Fragment{
             mTeaRegionView.setText(mTea.getmRegion());
         }
 
+        //handles click events, sends tea id to teaactivity to create proper display
         @Override
         public void onClick(View v) {
             Intent intent = TeaActivity.newIntent(getActivity(), mTea.getmId());
@@ -113,6 +119,8 @@ public class TeaListFragment extends Fragment{
 
         }
     }
+
+
 
     private class TeaAdapter extends RecyclerView.Adapter<TeaHolder> {
         private List<Tea> mTeas;

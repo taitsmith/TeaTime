@@ -1,6 +1,7 @@
 package net.taitsmith.teatime;
 
 import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -8,13 +9,14 @@ import java.util.UUID;
 
 /**
  * Created by taits on 03-May-16.
- * Does all the work of creating the list
+ * Does all the work of creating the tea objects and list
  * of teas which are then fed through TeaListFragmentTest
  * and called by TeaListActivity when buttons are pressed
  */
 public class TeaLab {
+    private final String LOG_TAG = "LOG";
     private static TeaLab sTeaList;
-    public List<Tea> mwhiteTeas, moolongTeas, motherRegionTeas, mchinaTeas, mafricaTeas,
+    public List<Tea> mwhiteOolongTeas, moolongTeas, mchinaTeas, mafricaTeas,
                         mjapanTeas, motherTypeTeas, mblackTeas, mgreenTeas, mTeas;
 
 
@@ -29,11 +31,12 @@ public class TeaLab {
     private TeaLab(Context context){ //turns List<Tea> into ArrayList for ArrayAdapter
         mgreenTeas = new ArrayList<>();
         mblackTeas = new ArrayList<>();
-        mwhiteTeas = new ArrayList<>();
+        mwhiteOolongTeas = new ArrayList<>();
         mchinaTeas = new ArrayList<>();
         mTeas = new ArrayList<>();
         mjapanTeas = new ArrayList<>();
-        mafricaTeas = new ArrayList<>();
+        mafricaTeas = new ArrayList<>(); //now  includes india and other regions
+        moolongTeas = new ArrayList<>();
 
 
         Tea assam = new Tea();
@@ -65,6 +68,16 @@ public class TeaLab {
         mblackTeas.add(ceylon);
         mafricaTeas.add(ceylon);
         mTeas.add(ceylon);
+
+        Tea dhp = new Tea();
+        dhp.setmName("Da Hong Pao");
+        dhp.setmType("Oolong");
+        dhp.setmRegion("China");
+        dhp.setmDirections("95c for 2 to 3 minutes");
+        dhp.setmDesc(R.string.dhp_desc);
+        mwhiteOolongTeas.add(dhp);
+        mchinaTeas.add(dhp);
+        mTeas.add(dhp);
 
         Tea darjeeling = new Tea();
         darjeeling.setmName("Darjeeling");
@@ -157,6 +170,16 @@ public class TeaLab {
         mafricaTeas.add(irish);
         mTeas.add(irish);
 
+        Tea jax = new Tea();
+        jax.setmName("Jaksul");
+        jax.setmType("Green");
+        jax.setmRegion("Korea");
+        jax.setmDirections("75c for 2 minutes");
+        jax.setmDesc(R.string.jax_desc);
+        mTeas.add(jax);
+        mgreenTeas.add(jax);
+        mafricaTeas.add(jax);
+
         Tea keemun = new Tea();
         keemun.setmName("Keemun");
         keemun.setmType("Black");
@@ -207,37 +230,106 @@ public class TeaLab {
         mchinaTeas.add(lapsang);
         mTeas.add(lapsang);
 
-        Tea lc = new Tea();
-        lc.setmName("Lung Ching");
-        lc.setmType("Green");
-        lc.setmRegion("China");
-        mchinaTeas.add(lc);
-        mgreenTeas.add(lc);
-        mTeas.add(lc);
-
         Tea mpg = new Tea();
         mpg.setmName("Monkey Picked Golden");
         mpg.setmType("Black");
         mpg.setmRegion("China");
+        mpg.setmDirections("100c for 2 to 3 minutes");
+        mpg.setmDesc(R.string.mpg_desc);
         mblackTeas.add(mpg);
         mchinaTeas.add(mpg);
         mTeas.add(mpg);
 
         Tea plc = new Tea();
-        plc.setmName("Pi Lo Chun");
+        plc.setmName("Pi Luo Chun");
         plc.setmType("Green");
         plc.setmRegion("China");
+        plc.setmDirections("80c for 1 to 2 minutes");
+        plc.setmDesc(R.string.plc_desc);
         mchinaTeas.add(plc);
         mgreenTeas.add(plc);
         mTeas.add(plc);
 
+        Tea pou = new Tea();
+        pou.setmName("Pouchong");
+        pou.setmType("Oolong");
+        pou.setmRegion("Taiwan");
+        pou.setmDirections("95c for 3 minutes");
+        pou.setmDesc(R.string.pou_desc);
+        mwhiteOolongTeas.add(pou);
+        mafricaTeas.add(pou);
+        mTeas.add(pou);
+
         Tea sencha = new Tea();
         sencha.setmName("Sencha");
         sencha.setmType("Green");
+        sencha.setmDirections("80c for 1 minute");
+        sencha.setmDesc(R.string.sencha_desc);
         sencha.setmRegion("Japan");
         mgreenTeas.add(sencha);
         mjapanTeas.add(sencha);
         mTeas.add(sencha);
+
+        Tea sm = new Tea();
+        sm.setmName("Shoumei");
+        sm.setmRegion("China");
+        sm.setmType("White");
+        sm.setmDirections("70c for 2 to 3 minutes");
+        sm.setmDesc(R.string.sm_desc);
+        mwhiteOolongTeas.add(sm);
+        mchinaTeas.add(sm);
+        mTeas.add(sm);
+
+        Tea sh = new Tea();
+        sh.setmName("Shui Hsien");
+        sh.setmType("Oolong");
+        sh.setmRegion("China");
+        sh.setmDirections("95c for 2 to 3 minutes");
+        sh.setmDesc(R.string.sh_desc);
+        mwhiteOolongTeas.add(sh);
+        mchinaTeas.add(sh);
+        mTeas.add(sh);
+
+        Tea sjg = new Tea();
+        sjg.setmName("Shui Jin Gui");
+        sjg.setmType("Oolong");
+        sjg.setmRegion("China");
+        sjg.setmDirections("95c for 3 minutes");
+        sjg.setmDesc(R.string.sjg_desc);
+        mwhiteOolongTeas.add(sjg);
+        mchinaTeas.add(sjg);
+        mTeas.add(sjg);
+
+        Tea sn = new Tea();
+        sn.setmName("Silver Needle");
+        sn.setmType("White");
+        sn.setmRegion("China");
+        sn.setmDirections("75c up to 5 minutes");
+        sn.setmDesc(R.string.sn_desc);
+        mchinaTeas.add(sn);
+        mwhiteOolongTeas.add(sn);
+        mTeas.add(sn);
+
+        Tea tgy = new Tea();
+        tgy.setmName("Tieguanyin");
+        tgy.setmType("Oolong");
+        tgy.setmRegion("China");
+        tgy.setmDirections("90-95c for 2 to 3 minutes");
+        tgy.setmDesc(R.string.tgy_desc);
+        mchinaTeas.add(tgy);
+        mwhiteOolongTeas.add(tgy);
+        mTeas.add(tgy);
+
+
+        Tea tie = new Tea();
+        tie.setmName("Tieluohan");
+        tie.setmType("Oolong");
+        tie.setmRegion("China");
+        tie.setmDirections("95c for 2 to 3 minutes");
+        tie.setmDesc(R.string.tie_desc);
+        mwhiteOolongTeas.add(tie);
+        mchinaTeas.add(tie);
+        mTeas.add(tie);
 
         Tea yun = new Tea();
         yun.setmName("Yunnan");
@@ -248,6 +340,18 @@ public class TeaLab {
         mchinaTeas.add(yun);
         mblackTeas.add(yun);
         mTeas.add(yun);
+
+        Tea wp = new Tea();
+        wp.setmName("White Peony");
+        wp.setmType("White");
+        wp.setmDirections("75c for 3 minutes");
+        wp.setmRegion("China");
+        wp.setmDesc(R.string.wp_desc);
+        mwhiteOolongTeas.add(wp);
+        mchinaTeas.add(wp);
+        mTeas.add(wp);
+
+
 
     }
 
@@ -263,9 +367,8 @@ public class TeaLab {
     public List<Tea> getmGreenTeas() {
         return mgreenTeas;
     }
-    public List<Tea> getmchinaTeas() {
-        return mchinaTeas;
-    }
+    public List<Tea> getmchinaTeas() { return mchinaTeas; }
+    public List<Tea> getmWhiteTeas() { return mwhiteOolongTeas; }
 
     public Tea getTeas(UUID id) {
         for (Tea tea : mTeas) {

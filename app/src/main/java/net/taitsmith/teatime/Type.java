@@ -13,7 +13,6 @@ public class Type extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
-        Toast.makeText(this, "Choose a type", Toast.LENGTH_LONG).show();
     }
 
     public static final String EXTRA_LIST_ID =
