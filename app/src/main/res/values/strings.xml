@@ -13,14 +13,14 @@
     <string name="tea_green">green teas</string>
     <string name="tea_other">other teas</string>
     <string name="back_button">back</string>
-    <string name="tea_desc">Something seems to have gone wrong here...</string>
+    <string name="tea_desc">Something seems to have gone wrong here&#8230;</string>
     <string name="gpg_desc">Chinese green tea from the Zhejiang province in eastern China.
         Its English name comes from the fact that the tightly rolled pellets resemble gunpowder.
         The rolling of the leaves helps prevent physical damage and breaking, as well as
         maintaining much of the flavour that would otherwise be lost.\n\nWhen purchasing
         gunpowder green tea, a shinier leaf is often representative of a fresher tea. Smaller
         pellet size is also a sign of higher-quality tea.</string>
-    <string name="dw_desc">Also known as Lung Ching or Longjing. Chinese green tea from the
+    <string name="dw_desc">Also known as Lung Ching or Longjing. A green tea from the
         Zhejiang province in eastern China. Leaves are pan-roasted shortly after picking to
         produce a smooth, floral flavour with a slightly toast aftertaste. In the most strictly
         authentic definition, true dragonwell tea comes only from the one area in the Hangzhou region
@@ -152,7 +152,7 @@
         after picking, while Chinese teas are typically pan-fired first. Following the steaming, leaves
         are rolled, shaped and dried which lends them a characteristic flat cylindrical shape. Steaming
         has an impact on the final flavour of the tea, as well as the look- sencha tends to have a
-        slightly more bitter taste than it\'s Chinese relatives, as well a grassy, fresh vegetable taste.
+        slightly more bitter taste than its Chinese relatives, as well a grassy, fresh vegetable taste.
         Water temperature can have a slight effect on the final taste, but the colour will generally
         be a greenish gold.</string>
     <string name="ls_desc">Lapsang Souchong differs from other Chinese teas in that it is dried over
