@@ -1,6 +1,10 @@
 <resources>
+    <!-- Misc labels -->
     <string name="app_name">Tea Time</string>
     <string name="welcome_text">Find teas by:</string>
+    <string name="tea_desc">Something seems to have gone wrong here&#8230;</string>
+
+    <!-- button labels -->
     <string name="region_button">region</string>
     <string name="type_button">type</string>
     <string name="japan_button">japan</string>
@@ -13,7 +17,10 @@
     <string name="tea_green">green teas</string>
     <string name="tea_other">other teas</string>
     <string name="back_button">back</string>
-    <string name="tea_desc">Something seems to have gone wrong here&#8230;</string>
+    <string name="about_button">About</string>
+
+
+    <!-- Tea descriptions -->
     <string name="gpg_desc">Chinese green tea from the Zhejiang province in eastern China.
         Its English name comes from the fact that the tightly rolled pellets resemble gunpowder.
         The rolling of the leaves helps prevent physical damage and breaking, as well as
@@ -238,4 +245,8 @@
         in the Fujian province in eastern China, and has been produced in Taiwan since the late 1800s.
         The leaves tend to resemble curled rope with a dark green colour, and produce a floral cup
         with a rich, sweet flavour. Pouchong leaves are picked and produced around the end of March.</string>
+
+    <!-- for the about page -->
+    <string name="about_page_info">This is some about page info. It\'ll be an explanation of the tea
+        page as well as maybe a history of tea of something.</string>
 </resources>

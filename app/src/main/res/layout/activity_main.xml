@@ -41,5 +41,15 @@
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/region_button"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/help_button"
+        android:text="@string/type_button"
+        android:onClick="teaByType"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="8dp"/>
 
 </RelativeLayout>
