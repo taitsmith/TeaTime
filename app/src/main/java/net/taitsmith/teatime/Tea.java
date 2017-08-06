@@ -3,8 +3,8 @@ package net.taitsmith.teatime;
 import java.util.UUID;
 
 /**
- * Created by taits on 03-May-16.
- * Creates and sets all relevant tea data
+ *
+ * Tea object. Nothing exciting.
  */
 public class Tea { //tea object used to populate <Tea> list
     private UUID mId;

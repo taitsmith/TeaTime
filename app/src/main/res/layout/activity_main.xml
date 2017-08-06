@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/welcome_text"
         android:textAllCaps="true"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:id="@+id/find_by"
         />
 
@@ -28,7 +28,6 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/region_button"
         android:text="@string/region_button"
-        android:onClick="teaByRegion"
         android:background="@color/colorPrimaryDark"/>
     <Button
         android:layout_width="wrap_content"
@@ -37,18 +36,6 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/type_button"
         android:text="@string/type_button"
-        android:onClick="teaByType"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="8dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/region_button"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/help_button"
-        android:text="@string/type_button"
-        android:onClick="teaByType"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
 

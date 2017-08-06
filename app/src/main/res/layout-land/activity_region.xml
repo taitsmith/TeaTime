@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="4dp"
-    tools:context="net.taitsmith.teatime.Region"
+    tools:context="net.taitsmith.teatime.RegionActivity"
     android:background="@color/colorPrimary">
 
     <Button

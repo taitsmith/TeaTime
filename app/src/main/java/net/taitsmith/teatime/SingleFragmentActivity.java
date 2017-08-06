@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 /**
- * Created by taits on 04-May-16.
+ *So apparently I felt like this was the right way to do things.
  */
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();

@@ -349,19 +349,16 @@ public class TeaLab {
         mwhiteOolongTeas.add(wp);
         mchinaTeas.add(wp);
         mTeas.add(wp);
-
-
-
     }
 
 
-    public List<Tea> getmTeas() { return mTeas; }
-    public List<Tea> getmJapanTeas() { return mjapanTeas; }
-    public List<Tea> getmAfricaTeas(){ return mafricaOtherTeas; }
-    public List<Tea> getmBlackTeas() { return mblackTeas; }
-    public List<Tea> getmGreenTeas() { return mgreenTeas; }
-    public List<Tea> getmchinaTeas() { return mchinaTeas; }
-    public List<Tea> getmWhiteTeas() { return mwhiteOolongTeas; }
+    List<Tea> getmTeas() { return mTeas; }
+    List<Tea> getmJapanTeas() { return mjapanTeas; }
+    List<Tea> getmAfricaTeas(){ return mafricaOtherTeas; }
+    List<Tea> getmBlackTeas() { return mblackTeas; }
+    List<Tea> getmGreenTeas() { return mgreenTeas; }
+    List<Tea> getmchinaTeas() { return mchinaTeas; }
+    List<Tea> getmWhiteTeas() { return mwhiteOolongTeas; }
 
     public Tea getTeas(UUID id) {
         for (Tea tea : mTeas) {

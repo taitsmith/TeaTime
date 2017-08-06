@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="4dp"
-    tools:context="net.taitsmith.teatime.Region"
+    tools:context="net.taitsmith.teatime.RegionActivity"
     android:background="@color/colorPrimary">
 
     <Button
@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/japan_button"
         android:text="@string/japan_button"
-        android:onClick="teaJapan"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
     <Button
@@ -24,7 +23,6 @@
         android:id="@+id/china_button"
         android:text="@string/china_button"
         android:layout_below="@+id/japan_button"
-        android:onClick="teaChina"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
     <Button
@@ -33,18 +31,17 @@
         android:id="@+id/africa_button"
         android:text="@string/africa_button"
         android:layout_below="@id/china_button"
-        android:onClick="teaAfricaIndiaOther"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
 
 
     <Button
+        android:id="@+id/type_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Choose by Type"
-        android:onClick="teaByType"
         android:background="@color/colorPrimaryDark"
         android:padding="8dp"/>
 

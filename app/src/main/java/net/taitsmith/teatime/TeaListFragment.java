@@ -9,32 +9,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
- * Created by taits on 02-May-16.
- * Does all the work of finding and populating
- * the recyclerview fragment. Can't be actively
- * called because it's a fragment, calls must go
- * through TeaListActivity.
+ *It's a fragment. It displays the recyclerview containing the list of teas
+ * based on which group was selected in the previous activity. It used to be
+ * gross spaghetti code but a year later (summer 2017) it's been cleaned up
+ * a bit to be less horrifying and make a bit more sense. Names have been changed
+ * and Butterknife was added to reduce boilerplate (as they say).
  */
 
 public class TeaListFragment extends Fragment{
-    private RecyclerView mTeaRecyclerView; //recycler to create list
-    private TeaAdapter mAdapter; /*adapter takes from array via holder
-                                  *and puts into recyler view to fill out
-                                  *list items
-                                  */
+    private TeaAdapter teaAdapter;
+    List<Tea> teas;
+
+    @BindView(R.id.tea_recycler_view)
+    RecyclerView teaRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tea_list_fragment, container, false);
+        ButterKnife.bind(this, view);
 
-        mTeaRecyclerView = (RecyclerView) view.findViewById(R.id.tea_recycler_view);
-        mTeaRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        teaRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
 
@@ -45,86 +47,76 @@ public class TeaListFragment extends Fragment{
     //TODO update to switch
     private void updateUI() {
         String teaId = (String) getActivity().getIntent()
-                .getSerializableExtra(Region.EXTRA_LIST_ID);
+                .getSerializableExtra(RegionActivity.EXTRA_LIST_ID);
         TeaLab teaLab = TeaLab.get(getActivity());
 
-
-        /** long winded way of getting intent extra from either region menu or type menu.
-         *  intent includes a string with the name of the button selected (black teas, chinese
-         *  teas etc), which goes through the if-else-if to find the proper List<>, create the
-         *  adapter and set the adapter to the recycler view. Working on a way to simplify the code
-         *  most likely with a switch.
-         */
-        if (teaId.equals("china")) {
-            List<Tea> teas = teaLab.getmchinaTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("black")) {
-            List<Tea> teas = teaLab.getmBlackTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("japan")) {
-            List<Tea> teas = teaLab.getmJapanTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("green")) {
-            List<Tea> teas = teaLab.getmGreenTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("africa")) {
-            List<Tea> teas = teaLab.getmAfricaTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("allTeas")){
-            List<Tea> teas = teaLab.getmTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
-        } else if (teaId.equals("white")) {
-            List<Tea> teas = teaLab.getmWhiteTeas();
-            mAdapter = new TeaAdapter(teas);
-            mTeaRecyclerView.setAdapter(mAdapter);
+        //can you believe this was originally a GIANT
+        //if else if block? it was gross.
+        switch (teaId) {
+            case "china":
+                teas = teaLab.getmchinaTeas();
+                break;
+            case "black":
+                teas = teaLab.getmBlackTeas();
+                break;
+            case "japan":
+                teas = teaLab.getmchinaTeas();
+                break;
+            case "green":
+                teas = teaLab.getmGreenTeas();
+                break;
+            case "africa":
+                teas = teaLab.getmAfricaTeas();
+                break;
+            case "allTeas":
+                teas = teaLab.getmTeas();
+                break;
+            case "white":
+                teas = teaLab.getmWhiteTeas();
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown tea typ");
         }
 
+        teaAdapter = new TeaAdapter(teas);
+        teaRecyclerView.setAdapter(teaAdapter);
     }
 
     //creates the list item view
-    private class TeaHolder extends RecyclerView.ViewHolder
+    class TeaHolder extends RecyclerView.ViewHolder
         implements View.OnClickListener {
+        @BindView(R.id.tea_name_text_view)
+        TextView teaNameView;
+        @BindView(R.id.tea_region_text_view)
+        TextView teaRegionView;
+        @BindView(R.id.tea_type_text_view)
+        TextView teaTypeView;
 
-        private TextView mTeaNameView, mTeaTypeView, mTeaRegionView;
-        private Tea mTea;
+        private Tea tea;
 
         public TeaHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
 
             //because we want the items to be selectable
             itemView.setOnClickListener(this);
 
-            mTeaNameView = (TextView)
-                    itemView.findViewById(R.id.tea_name_text_view);
-            mTeaRegionView = (TextView)
-                    itemView.findViewById(R.id.tea_region_text_view);
-            mTeaTypeView = (TextView)
-                    itemView.findViewById(R.id.tea_type_text_view);
         }
 
-        public void bindTea(Tea tea) {
-            mTea = tea;
-            mTeaNameView.setText(mTea.getmName());
-            mTeaTypeView.setText(mTea.getmType());
-            mTeaRegionView.setText(mTea.getmRegion());
+        void bindTea(Tea tea) {
+            this.tea = tea;
+            teaNameView.setText(this.tea.getmName());
+            teaTypeView.setText(this.tea.getmType());
+            teaRegionView.setText(this.tea.getmRegion());
         }
 
         //handles click events, sends tea id to teaactivity to create proper display
         @Override
         public void onClick(View v) {
-            Intent intent = TeaActivity.newIntent(getActivity(), mTea.getmId());
+            Intent intent = TeaActivity.newIntent(getActivity(), tea.getmId());
             startActivity(intent);
-
         }
     }
-
-
 
     private class TeaAdapter extends RecyclerView.Adapter<TeaHolder> {
         private List<Tea> mTeas;

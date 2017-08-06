@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-public class Type extends AppCompatActivity {
+public class TypeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class Type extends AppCompatActivity {
     }
 
     public void teaByRegion(View view) {
-        Intent intent = new Intent(this, Region.class);
+        Intent intent = new Intent(this, RegionActivity.class);
         startActivity(intent);
     }
 
