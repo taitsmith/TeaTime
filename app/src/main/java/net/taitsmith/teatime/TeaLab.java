@@ -2,6 +2,8 @@ package net.taitsmith.teatime;
 
 import android.content.Context;
 
+import net.taitsmith.teatime.data.Tea;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -28,327 +30,318 @@ public class TeaLab {
 
     //TODO finish adding teas
     private TeaLab(Context context){ //turns List<Tea> into ArrayList for ArrayAdapter
-        mgreenTeas = new ArrayList<>();
-        mblackTeas = new ArrayList<>();
-        mwhiteOolongTeas = new ArrayList<>();
-        mchinaTeas = new ArrayList<>();
-        mTeas = new ArrayList<>();
-        mjapanTeas = new ArrayList<>();
-        mafricaOtherTeas = new ArrayList<>(); //updated to include other regions
-        moolongTeas = new ArrayList<>();
+
 
 
         Tea assam = new Tea();
-        assam.setmName("Assam");
-        assam.setmRegion("India");
-        assam.setmType("Black");
-        assam.setmDirections("90-95c for two minutes");
-        assam.setmDesc(R.string.assam_desc);
+        assam.setName(context.getString(R.string.assam));
+        assam.setRegion(context.getString(R.string.india));
+        assam.setType(context.getString(R.string.tea_black));
+        assam.setDirections("90-95c for two minutes");
+        assam.setDescription(context.getString(R.string.assam_desc));
         mblackTeas.add(assam);
         mafricaOtherTeas.add(assam);
         mTeas.add(assam);
 
         Tea bdp = new Tea();
-        bdp.setmName("Black Dragon Pearls");
-        bdp.setmType("Black");
-        bdp.setmRegion("China");
-        bdp.setmDirections("90c for 3-4 minutes");
-        bdp.setmDesc(R.string.bdp_desc);
+        bdp.setName(context.getString(R.string.black_dragon_pearls));
+        bdp.setType(context.getString(R.string.tea_black));
+        bdp.setRegion(context.getString(R.string.china));
+        bdp.setDirections("90c for 3-4 minutes");
+        bdp.setDescription(context.getString(R.string.bdp_desc));
         mchinaTeas.add(bdp);
         mblackTeas.add(bdp);
         mTeas.add(bdp);
 
         Tea ceylon = new Tea();
-        ceylon.setmName("Ceylon - Sri Lanka");
-        ceylon.setmRegion("Africa");
-        ceylon.setmType("Black");
-        ceylon.setmDesc(R.string.ceylon_desc);
-        ceylon.setmDirections("Varies");
+        ceylon.setName(context.getString(R.string.ceylon_sri_lanka));
+        ceylon.setRegion(context.getString(R.string.africa));
+        ceylon.setType(context.getString(R.string.tea_black));
+        ceylon.setDescription(context.getString(R.string.ceylon_desc));
+        ceylon.setDirections("Varies");
         mblackTeas.add(ceylon);
         mafricaOtherTeas.add(ceylon);
         mTeas.add(ceylon);
 
         Tea dhp = new Tea();
-        dhp.setmName("Da Hong Pao");
-        dhp.setmType("Oolong");
-        dhp.setmRegion("China");
-        dhp.setmDirections("95c for 2 to 3 minutes");
-        dhp.setmDesc(R.string.dhp_desc);
+        dhp.setName(context.getString(R.string.da_hong_pao));
+        dhp.setType(context.getString(R.string.tea_oolong));
+        dhp.setRegion(context.getString(R.string.china));
+        dhp.setDirections("95c for 2 to 3 minutes");
+        dhp.setDescription(context.getString(R.string.dhp_desc));
         mwhiteOolongTeas.add(dhp);
         mchinaTeas.add(dhp);
         mTeas.add(dhp);
 
         Tea darjeeling = new Tea();
-        darjeeling.setmName("Darjeeling");
-        darjeeling.setmType("Black");
-        darjeeling.setmRegion("India");
-        darjeeling.setmDesc(R.string.dar_desc);
-        darjeeling.setmDirections("Varies");
+        darjeeling.setName(context.getString(R.string.darjeeling));
+        darjeeling.setType(context.getString(R.string.tea_black));
+        darjeeling.setRegion(context.getString(R.string.india));
+        darjeeling.setDescription(context.getString(R.string.dar_desc));
+        darjeeling.setDirections("Varies");
         mTeas.add(darjeeling);
         mblackTeas.add(darjeeling);
         mafricaOtherTeas.add(darjeeling);
 
         Tea dw = new Tea();
-        dw.setmName("Dragonwell");
-        dw.setmRegion("China");
-        dw.setmType("Green");
-        dw.setmDirections("75-80c for 60 seconds");
-        dw.setmDesc(R.string.dw_desc);
+        dw.setName(context.getString(R.string.dragonwell));
+        dw.setRegion(context.getString(R.string.china));
+        dw.setType(context.getString(R.string.tea_green));
+        dw.setDirections("75-80c for 60 seconds");
+        dw.setDescription(context.getString(R.string.dw_desc));
         mTeas.add(dw);
         mchinaTeas.add(dw);
         mgreenTeas.add(dw);
 
-
         Tea earlgrey = new Tea();
-        earlgrey.setmName("Earl Grey");
-        earlgrey.setmRegion("China");
-        earlgrey.setmType("Black");
-        earlgrey.setmDesc(R.string.eg_desc);
-        earlgrey.setmDirections("95c for 3 minutes");
+        earlgrey.setName(context.getString(R.string.earl_grey));
+        earlgrey.setRegion(context.getString(R.string.china));
+        earlgrey.setType(context.getString(R.string.tea_black));
+        earlgrey.setDescription(context.getString(R.string.eg_desc));
+        earlgrey.setDirections("95c for 3 minutes");
         mblackTeas.add(earlgrey);
         mchinaTeas.add(earlgrey);
         mTeas.add(earlgrey);
 
         Tea eb = new Tea();
-        eb.setmName("English Breakfast");
-        eb.setmType("Black");
-        eb.setmRegion("China");
-        eb.setmDesc(R.string.eb_desc);
-        eb.setmDirections("95c for 3 minutes");
+        eb.setName(context.getString(R.string.english_breakfast));
+        eb.setType(context.getString(R.string.tea_black));
+        eb.setRegion(context.getString(R.string.china));
+        eb.setDescription(context.getString(R.string.eb_desc));
+        eb.setDirections("95c for 3 minutes");
         mblackTeas.add(eb);
         mchinaTeas.add(eb);
         mTeas.add(eb);
 
         Tea genmaicha = new Tea();
-        genmaicha.setmName("Genmaicha");
-        genmaicha.setmType("Green");
-        genmaicha.setmRegion("Japan");
-        genmaicha.setmDirections("100c for 30 seconds");
-        genmaicha.setmDesc(R.string.gen_desc);
+        genmaicha.setName(context.getString(R.string.genmaicha));
+        genmaicha.setType(context.getString(R.string.tea_green));
+        genmaicha.setRegion(context.getString(R.string.japan));
+        genmaicha.setDirections("100c for 30 seconds");
+        genmaicha.setDescription(context.getString(R.string.gen_desc));
         mgreenTeas.add(genmaicha);
         mjapanTeas.add(genmaicha);
         mTeas.add(genmaicha);
 
         Tea gpg = new Tea();
-        gpg.setmName("Gundpowder Green");
-        gpg.setmType("Green");
-        gpg.setmRegion("China");
-        gpg.setmDirections("70c for 60 seconds");
-        gpg.setmDesc(R.string.gpg_desc);
+        gpg.setName(context.getString(R.string.gunpowder_green));
+        gpg.setType(context.getString(R.string.tea_green));
+        gpg.setRegion(context.getString(R.string.china));
+        gpg.setDirections("70c for 60 seconds");
+        gpg.setDescription(context.getString(R.string.gpg_desc));
         mchinaTeas.add(gpg);
         mgreenTeas.add(gpg);
         mTeas.add(gpg);
 
         Tea gyo = new Tea();
-        gyo.setmName("Gyokuro");
-        gyo.setmType("Green");
-        gyo.setmRegion("Japan");
-        gyo.setmDirections("50-60c for 90 seconds");
-        gyo.setmDesc(R.string.gyo_desc);
+        gyo.setName(context.getString(R.string.gyokuro));
+        gyo.setType(context.getString(R.string.tea_green));
+        gyo.setRegion(context.getString(R.string.japan));
+        gyo.setDirections("50-60c for 90 seconds");
+        gyo.setDescription(context.getString(R.string.gyo_desc));
         mgreenTeas.add(gyo);
         mjapanTeas.add(gyo);
         mTeas.add(gyo);
 
         Tea hoj = new Tea();
-        hoj.setmName("Hojicha");
-        hoj.setmType("Green");
-        hoj.setmRegion("Japan");
-        hoj.setmDirections("82c for 30 to 90 seconds");
-        hoj.setmDesc(R.string.hoj_desc);
+        hoj.setName(context.getString(R.string.hojicha));
+        hoj.setType(context.getString(R.string.tea_green));
+        hoj.setRegion(context.getString(R.string.japan));
+        hoj.setDirections("82c for 30 to 90 seconds");
+        hoj.setDescription(context.getString(R.string.hoj_desc));
         mgreenTeas.add(hoj);
         mjapanTeas.add(hoj);
         mTeas.add(hoj);
 
         Tea irish = new Tea();
-        irish.setmName("Irish Breakfast");
-        irish.setmRegion("India");
-        irish.setmType("Black");
-        irish.setmDirections("95c for 30 seconds");
-        irish.setmDesc(R.string.ib_desc);
+        irish.setName(context.getString(R.string.irish_breakfast));
+        irish.setRegion(context.getString(R.string.india));
+        irish.setType(context.getString(R.string.tea_black));
+        irish.setDirections("95c for 30 seconds");
+        irish.setDescription(context.getString(R.string.ib_desc));
         mblackTeas.add(irish);
         mafricaOtherTeas.add(irish);
         mTeas.add(irish);
 
         Tea jax = new Tea();
-        jax.setmName("Jaksul");
-        jax.setmType("Green");
-        jax.setmRegion("Korea");
-        jax.setmDirections("75c for 2 minutes");
-        jax.setmDesc(R.string.jax_desc);
+        jax.setName(context.getString(R.string.jaksul));
+        jax.setType(context.getString(R.string.tea_green));
+        jax.setRegion("Korea");
+        jax.setDirections("75c for 2 minutes");
+        jax.setDescription(context.getString(R.string.jax_desc));
         mTeas.add(jax);
         mgreenTeas.add(jax);
         mafricaOtherTeas.add(jax);
 
         Tea keemun = new Tea();
-        keemun.setmName("Keemun");
-        keemun.setmType("Black");
-        keemun.setmRegion("China");
-        keemun.setmDirections("95c for 3 minutes");
-        keemun.setmDesc(R.string.keemun_desc);
+        keemun.setName(context.getString(R.string.keemun));
+        keemun.setType(context.getString(R.string.tea_black));
+        keemun.setRegion(context.getString(R.string.china));
+        keemun.setDirections("95c for 3 minutes");
+        keemun.setDescription(context.getString(R.string.keemun_desc));
         mblackTeas.add(keemun);
         mchinaTeas.add(keemun);
         mTeas.add(keemun);
 
         Tea ctc = new Tea();
-        ctc.setmName("Kenyan CTC");
-        ctc.setmType("Black");
-        ctc.setmRegion("Africa");
-        ctc.setmDirections("95c for 30 seconds");
-        ctc.setmDesc(R.string.ctc_desc);
+        ctc.setName(context.getString(R.string.kenyan_ctc));
+        ctc.setType(context.getString(R.string.tea_black));
+        ctc.setRegion("Africa");
+        ctc.setDirections("95c for 30 seconds");
+        ctc.setDescription(context.getString(R.string.ctc_desc));
         mblackTeas.add(ctc);
         mafricaOtherTeas.add(ctc);
         mTeas.add(ctc);
 
         Tea kenyan = new Tea();
-        kenyan.setmName("Kenyan");
-        kenyan.setmType("Black");
-        kenyan.setmDirections("95c for 3 minutes");
-        kenyan.setmRegion("Africa");
-        kenyan.setmDesc(R.string.kenyan_desc);
+        kenyan.setName(context.getString(R.string.kenyan));
+        kenyan.setType(context.getString(R.string.tea_black));
+        kenyan.setDirections("95c for 3 minutes");
+        kenyan.setRegion("Africa");
+        kenyan.setDescription(context.getString(R.string.kenyan_desc));
         mblackTeas.add(kenyan);
         mafricaOtherTeas.add(kenyan);
         mTeas.add(kenyan);
 
         Tea kukicha = new Tea();
-        kukicha.setmName("Kukicha");
-        kukicha.setmType("Green");
-        kukicha.setmRegion("Japan");
-        kukicha.setmDirections("80c for 40 seconds");
-        kukicha.setmDesc(R.string.kuk_desc);
+        kukicha.setName(context.getString(R.string.kukicha));
+        kukicha.setType(context.getString(R.string.tea_green));
+        kukicha.setRegion(context.getString(R.string.japan));
+        kukicha.setDirections("80c for 40 seconds");
+        kukicha.setDescription(context.getString(R.string.kuk_desc));
         mgreenTeas.add(kukicha);
         mjapanTeas.add(kukicha);
         mTeas.add(kukicha);
-
         Tea lapsang = new Tea();
-        lapsang.setmName("Lapsang Souchong");
-        lapsang.setmType("Black");
-        lapsang.setmRegion("China");
-        lapsang.setmDirections("100c for 2 to 3 minutes");
-        lapsang.setmDesc(R.string.ls_desc);
+        lapsang.setName(context.getString(R.string.lapsang_souchong));
+        lapsang.setType(context.getString(R.string.tea_black));
+        lapsang.setRegion(context.getString(R.string.china));
+        lapsang.setDirections("100c for 2 to 3 minutes");
+        lapsang.setDescription(context.getString(R.string.ls_desc));
         mblackTeas.add(lapsang);
         mchinaTeas.add(lapsang);
         mTeas.add(lapsang);
 
         Tea mpg = new Tea();
-        mpg.setmName("Monkey Picked Golden");
-        mpg.setmType("Black");
-        mpg.setmRegion("China");
-        mpg.setmDirections("100c for 2 to 3 minutes");
-        mpg.setmDesc(R.string.mpg_desc);
+        mpg.setName(context.getString(R.string.monkey_picked_golden));
+        mpg.setType(context.getString(R.string.tea_black));
+        mpg.setRegion(context.getString(R.string.china));
+        mpg.setDirections("100c for 2 to 3 minutes");
+        mpg.setDescription(context.getString(R.string.mpg_desc));
         mblackTeas.add(mpg);
         mchinaTeas.add(mpg);
         mTeas.add(mpg);
 
         Tea plc = new Tea();
-        plc.setmName("Pi Luo Chun");
-        plc.setmType("Green");
-        plc.setmRegion("China");
-        plc.setmDirections("80c for 1 to 2 minutes");
-        plc.setmDesc(R.string.plc_desc);
+        plc.setName(context.getString(R.string.pi_luo_chun));
+        plc.setType(context.getString(R.string.tea_green));
+        plc.setRegion(context.getString(R.string.china));
+        plc.setDirections("80c for 1 to 2 minutes");
+        plc.setDescription(context.getString(R.string.plc_desc));
         mchinaTeas.add(plc);
         mgreenTeas.add(plc);
         mTeas.add(plc);
 
         Tea pou = new Tea();
-        pou.setmName("Pouchong");
-        pou.setmType("Oolong");
-        pou.setmRegion("Taiwan");
-        pou.setmDirections("95c for 3 minutes");
-        pou.setmDesc(R.string.pou_desc);
+        pou.setName(context.getString(R.string.pouchong));
+        pou.setType("Oolong");
+        pou.setRegion("Taiwan");
+        pou.setDirections("95c for 3 minutes");
+        pou.setDescription(context.getString(R.string.pou_desc));
         mwhiteOolongTeas.add(pou);
         mafricaOtherTeas.add(pou);
         mTeas.add(pou);
 
         Tea sencha = new Tea();
-        sencha.setmName("Sencha");
-        sencha.setmType("Green");
-        sencha.setmDirections("80c for 1 minute");
-        sencha.setmDesc(R.string.sencha_desc);
-        sencha.setmRegion("Japan");
+        sencha.setName(context.getString(R.string.sencha));
+        sencha.setType(context.getString(R.string.tea_green));
+        sencha.setDirections("80c for 1 minute");
+        sencha.setDescription(context.getString(R.string.sencha_desc));
+        sencha.setRegion(context.getString(R.string.japan));
         mgreenTeas.add(sencha);
         mjapanTeas.add(sencha);
         mTeas.add(sencha);
 
         Tea sm = new Tea();
-        sm.setmName("Shoumei");
-        sm.setmRegion("China");
-        sm.setmType("White");
-        sm.setmDirections("70c for 2 to 3 minutes");
-        sm.setmDesc(R.string.sm_desc);
+        sm.setName(context.getString(R.string.shoumei));
+        sm.setRegion(context.getString(R.string.china));
+        sm.setType("White");
+        sm.setDirections("70c for 2 to 3 minutes");
+        sm.setDescription(context.getString(R.string.sm_desc));
         mwhiteOolongTeas.add(sm);
         mchinaTeas.add(sm);
         mTeas.add(sm);
 
         Tea sh = new Tea();
-        sh.setmName("Shui Hsien");
-        sh.setmType("Oolong");
-        sh.setmRegion("China");
-        sh.setmDirections("95c for 2 to 3 minutes");
-        sh.setmDesc(R.string.sh_desc);
+        sh.setName(context.getString(R.string.shui_hsien));
+        sh.setType("Oolong");
+        sh.setRegion(context.getString(R.string.china));
+        sh.setDirections("95c for 2 to 3 minutes");
+        sh.setDescription(context.getString(R.string.sh_desc));
         mwhiteOolongTeas.add(sh);
         mchinaTeas.add(sh);
         mTeas.add(sh);
 
         Tea sjg = new Tea();
-        sjg.setmName("Shui Jin Gui");
-        sjg.setmType("Oolong");
-        sjg.setmRegion("China");
-        sjg.setmDirections("95c for 3 minutes");
-        sjg.setmDesc(R.string.sjg_desc);
+        sjg.setName(context.getString(R.string.shui_jin_gui));
+        sjg.setType("Oolong");
+        sjg.setRegion(context.getString(R.string.china));
+        sjg.setDirections("95c for 3 minutes");
+        sjg.setDescription(context.getString(R.string.sjg_desc));
         mwhiteOolongTeas.add(sjg);
         mchinaTeas.add(sjg);
         mTeas.add(sjg);
 
         Tea sn = new Tea();
-        sn.setmName("Silver Needle");
-        sn.setmType("White");
-        sn.setmRegion("China");
-        sn.setmDirections("75c up to 5 minutes");
-        sn.setmDesc(R.string.sn_desc);
+        sn.setName(context.getString(R.string.silver_needle));
+        sn.setType("White");
+        sn.setRegion(context.getString(R.string.china));
+        sn.setDirections("75c up to 5 minutes");
+        sn.setDescription(context.getString(R.string.sn_desc));
         mchinaTeas.add(sn);
         mwhiteOolongTeas.add(sn);
         mTeas.add(sn);
 
         Tea tgy = new Tea();
-        tgy.setmName("Tieguanyin");
-        tgy.setmType("Oolong");
-        tgy.setmRegion("China");
-        tgy.setmDirections("90-95c for 2 to 3 minutes");
-        tgy.setmDesc(R.string.tgy_desc);
+        tgy.setName(context.getString(R.string.tieguanyin));
+        tgy.setType("Oolong");
+        tgy.setRegion(context.getString(R.string.china));
+        tgy.setDirections("90-95c for 2 to 3 minutes");
+        tgy.setDescription(context.getString(R.string.tgy_desc));
         mchinaTeas.add(tgy);
         mwhiteOolongTeas.add(tgy);
         mTeas.add(tgy);
 
-
         Tea tie = new Tea();
-        tie.setmName("Tieluohan");
-        tie.setmType("Oolong");
-        tie.setmRegion("China");
-        tie.setmDirections("95c for 2 to 3 minutes");
-        tie.setmDesc(R.string.tie_desc);
+        tie.setName(context.getString(R.string.tieluohan));
+        tie.setType("Oolong");
+        tie.setRegion(context.getString(R.string.china));
+        tie.setDirections("95c for 2 to 3 minutes");
+        tie.setDescription(context.getString(R.string.tie_desc));
         mwhiteOolongTeas.add(tie);
         mchinaTeas.add(tie);
         mTeas.add(tie);
 
         Tea yun = new Tea();
-        yun.setmName("Yunnan");
-        yun.setmType("Black");
-        yun.setmDirections("Varies");
-        yun.setmRegion("China");
-        yun.setmDesc(R.string.yun_desc);
+        yun.setName(context.getString(R.string.yunnan));
+        yun.setType(context.getString(R.string.tea_black));
+        yun.setDirections("Varies");
+        yun.setRegion(context.getString(R.string.china));
+        yun.setDescription(context.getString(R.string.yun_desc));
         mchinaTeas.add(yun);
         mblackTeas.add(yun);
         mTeas.add(yun);
 
         Tea wp = new Tea();
-        wp.setmName("White Peony");
-        wp.setmType("White");
-        wp.setmDirections("75c for 3 minutes");
-        wp.setmRegion("China");
-        wp.setmDesc(R.string.wp_desc);
+        wp.setName(context.getString(R.string.white_peony));
+        wp.setType("White");
+        wp.setDirections("75c for 3 minutes");
+        wp.setRegion(context.getString(R.string.china));
+        wp.setDescription(context.getString(R.string.wp_desc));
         mwhiteOolongTeas.add(wp);
         mchinaTeas.add(wp);
         mTeas.add(wp);
+
     }
 
 
@@ -360,13 +353,5 @@ public class TeaLab {
     List<Tea> getmchinaTeas() { return mchinaTeas; }
     List<Tea> getmWhiteTeas() { return mwhiteOolongTeas; }
 
-    public Tea getTeas(UUID id) {
-        for (Tea tea : mTeas) {
-            if (tea.getmId().equals(id)) {
-                return tea;
-            }
-        }
-        return null;
-    }
 
 }

@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import net.taitsmith.teatime.data.Tea;
+
 import java.util.UUID;
 
 import butterknife.BindView;
@@ -44,12 +46,12 @@ public class TeaFragment extends android.support.v4.app.Fragment {
         View view = inflater.inflate(R.layout.tea_fragment, container, false);
         ButterKnife.bind(this, view);
 
-        teaName.setText(mTea.getmName());
+        teaName.setText(mTea.getName());
         teaDescription.setMovementMethod(new ScrollingMovementMethod());
         teaDescription.setText(mTea.getmDesc());
-        teaType.setText(mTea.getmType());
-        teaRegion.setText(mTea.getmRegion());
-        teaDirections.setText(mTea.getmDirections());
+        teaType.setText(mTea.getType());
+        teaRegion.setText(mTea.getRegion());
+        teaDirections.setText(mTea.getDirections());
 
         return view;
     }

@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/japan_button"
-        android:text="@string/japan_button"
+        android:text="@string/japan"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/china_button"
-        android:text="@string/china_button"
+        android:text="@string/china"
         android:layout_below="@+id/japan_button"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/africa_button"
-        android:text="@string/africa_button"
+        android:text="@string/africa"
         android:layout_below="@id/china_button"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"/>

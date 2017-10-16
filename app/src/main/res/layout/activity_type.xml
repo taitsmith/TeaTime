@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/white_tea_button"
-        android:text="@string/tea_white_oolong"
+        android:text="@string/tea_white"
         android:layout_below="@+id/black_tea_button"
         android:onClick="teaWhite"
         android:background="@color/colorPrimaryDark"

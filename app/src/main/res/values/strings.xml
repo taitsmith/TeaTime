@@ -7,19 +7,55 @@
     <!-- button labels -->
     <string name="region_button">region</string>
     <string name="type_button">type</string>
-    <string name="japan_button">japan</string>
-    <string name="china_button">china</string>
-    <string name="africa_button">africa/india/other</string>
-    <string name="india_button">india</string>
-    <string name="other_region_button">other</string>
-    <string name="tea_black">black teas</string>
-    <string name="tea_white_oolong">white teas/oolong teas</string>
-    <string name="tea_green">green teas</string>
-    <string name="tea_other">other teas</string>
     <string name="back_button">back</string>
     <string name="about_button">About</string>
 
+    <!-- types and regions-->
+    <string name="japan">Japan</string>
+    <string name="china">China</string>
+    <string name="africa">Africa</string>
+    <string name="india">India</string>
+    <string name="other_region">Other Region</string>
+    <string name="tea_black">Black Tea</string>
+    <string name="tea_white">White Tea</string>
+    <string name="tea_oolong">Oolong</string>
+    <string name="tea_green">Green Tea</string>
+    <string name="tea_other">other teas</string>
 
+
+    <!-- tea names -->
+    <string name="assam">Assam</string>
+    <string name="black_dragon_pearls">Black Dragon Pearls</string>
+    <string name="ceylon_sri_lanka">Ceylon - Sri Lanka</string>
+    <string name="da_hong_pao">Da Hong Pao</string>
+    <string name="darjeeling">Darjeeling</string>
+    <string name="dragonwell">Dragonwell</string>
+    <string name="earl_grey">Earl Grey</string>
+    <string name="english_breakfast">English Breakfast</string>
+    <string name="genmaicha">Genmaicha</string>
+    <string name="gunpowder_green">Gundpowder Green</string>
+    <string name="gyokuro">Gyokuro</string>
+    <string name="hojicha">Hojicha</string>
+    <string name="irish_breakfast">Irish Breakfast</string>
+    <string name="jaksul">Jaksul</string>
+    <string name="keemun">Keemun</string>
+    <string name="kenyan_ctc">Kenyan CTC</string>
+    <string name="kenyan">Kenyan</string>
+    <string name="kukicha">Kukicha</string>
+    <string name="lapsang_souchong">Lapsang Souchnong</string>
+    <string name="monkey_picked_golden">Monkey Picked Golden</string>
+    <string name="pi_luo_chun">Pi Luo Chun</string>
+    <string name="pouchong">Pouchong</string>
+    <string name="sencha">Sencha</string>
+    <string name="shoumei">Shoumei</string>
+    <string name="shui_hsien">Shui Hsien</string>
+    <string name="shui_jin_gui">Shui Jin Gui</string>
+    <string name="silver_needle">Silver Needle</string>
+    <string name="tieguanyin">Tieguanyin</string>
+    <string name="tieluohan">Tieluohan</string>
+    <string name="yunnan">Yunnan</string>
+    <string name="white_peony">White Peony</string>
+    
     <!-- Tea descriptions -->
     <string name="gpg_desc">Chinese green tea from the Zhejiang province in eastern China.
         Its English name comes from the fact that the tightly rolled pellets resemble gunpowder.
