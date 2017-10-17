@@ -1,29 +1,24 @@
 package net.taitsmith.teatime.ui;
 
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import net.taitsmith.teatime.R;
-import net.taitsmith.teatime.activities.TeaActivity;
 import net.taitsmith.teatime.data.Tea;
-
-import java.util.UUID;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.Realm;
 
-import static android.R.attr.name;
 import static net.taitsmith.teatime.activities.MainActivity.realmConfiguration;
 
 /**
  * Created by taits on 03-May-16
  */
-public class TeaFragment extends android.support.v4.app.Fragment {
+public class TeaDetailFragment extends android.support.v4.app.Fragment {
     @BindView(R.id.tea_name_textview)
     TextView teaName;
     @BindView(R.id.tea_description_text_view)
@@ -59,6 +54,7 @@ public class TeaFragment extends android.support.v4.app.Fragment {
         teaType.setText(tea.getType());
         teaRegion.setText(tea.getRegion());
         teaDirections.setText(tea.getDirections());
+        teaDescription.setText(tea.getDescription());
 
         return view;
     }

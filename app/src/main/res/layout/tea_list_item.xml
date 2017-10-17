@@ -18,6 +18,7 @@
         tools:text="Tea Name"
         android:padding="4dp"
         android:textSize="18sp"
+        android:textColor="#fff"
         />
 
     <TextView
@@ -27,7 +28,9 @@
         android:textStyle="bold"
         tools:text="Tea Type"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="#fff"
+        />
 
     <TextView
         android:id="@+id/tea_region_text_view"
@@ -37,7 +40,9 @@
         tools:text="Tea Region"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/tea_type_text_view" />
+        android:layout_below="@id/tea_type_text_view"
+        android:textColor="#fff"
+        />
 
 
 </RelativeLayout>

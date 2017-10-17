@@ -9,10 +9,10 @@ import io.realm.Realm;
 
 
 /**
- * In this version of TeaLab, all we do is create the Realm objects for each {@link Tea}
+ * In this version of TeaBrewer, all we do is create the Realm objects for each {@link Tea}
  * and assign it its relevant info.
  */
-public class TeaLab {
+public class TeaBrewer {
 
     //TODO finish up removing the last few hard-coded strings.
     public static void populateRealm(final Context context, Realm realm) {
@@ -115,7 +115,7 @@ public class TeaLab {
                 Tea jax = realm.createObject(Tea.class);
                 jax.setName(context.getString(R.string.jaksul));
                 jax.setType(context.getString(R.string.tea_green));
-                jax.setRegion("Korea");
+                jax.setRegion(context.getString(R.string.korea));
                 jax.setDirections("75c for 2 minutes");
                 jax.setDescription(context.getString(R.string.jax_desc));
 
@@ -129,7 +129,7 @@ public class TeaLab {
                 Tea ctc = realm.createObject(Tea.class);
                 ctc.setName(context.getString(R.string.kenyan_ctc));
                 ctc.setType(context.getString(R.string.tea_black));
-                ctc.setRegion("Africa");
+                ctc.setRegion(context.getString(R.string.africa));
                 ctc.setDirections("95c for 30 seconds");
                 ctc.setDescription(context.getString(R.string.ctc_desc));
 
@@ -137,7 +137,7 @@ public class TeaLab {
                 kenyan.setName(context.getString(R.string.kenyan));
                 kenyan.setType(context.getString(R.string.tea_black));
                 kenyan.setDirections("95c for 3 minutes");
-                kenyan.setRegion("Africa");
+                kenyan.setRegion(context.getString(R.string.africa));
                 kenyan.setDescription(context.getString(R.string.kenyan_desc));
 
                 Tea kukicha = realm.createObject(Tea.class);
@@ -170,8 +170,8 @@ public class TeaLab {
 
                 Tea pou = realm.createObject(Tea.class);
                 pou.setName(context.getString(R.string.pouchong));
-                pou.setType("Oolong");
-                pou.setRegion("Taiwan");
+                pou.setType(context.getString(R.string.tea_oolong));
+                pou.setRegion(context.getString(R.string.taiwan));
                 pou.setDirections("95c for 3 minutes");
                 pou.setDescription(context.getString(R.string.pou_desc));
 
@@ -185,41 +185,41 @@ public class TeaLab {
                 Tea sm = realm.createObject(Tea.class);
                 sm.setName(context.getString(R.string.shoumei));
                 sm.setRegion(context.getString(R.string.china));
-                sm.setType("White");
+                sm.setType(context.getString(R.string.tea_white));
                 sm.setDirections("70c for 2 to 3 minutes");
                 sm.setDescription(context.getString(R.string.sm_desc));
 
                 Tea sh = realm.createObject(Tea.class);
                 sh.setName(context.getString(R.string.shui_hsien));
-                sh.setType("Oolong");
+                sh.setType(context.getString(R.string.tea_oolong));
                 sh.setRegion(context.getString(R.string.china));
                 sh.setDirections("95c for 2 to 3 minutes");
                 sh.setDescription(context.getString(R.string.sh_desc));
 
                 Tea sjg = realm.createObject(Tea.class);
                 sjg.setName(context.getString(R.string.shui_jin_gui));
-                sjg.setType("Oolong");
+                sjg.setType(context.getString(R.string.tea_oolong));
                 sjg.setRegion(context.getString(R.string.china));
                 sjg.setDirections("95c for 3 minutes");
                 sjg.setDescription(context.getString(R.string.sjg_desc));
 
                 Tea sn = realm.createObject(Tea.class);
                 sn.setName(context.getString(R.string.silver_needle));
-                sn.setType("White");
+                sn.setType(context.getString(R.string.tea_white));
                 sn.setRegion(context.getString(R.string.china));
                 sn.setDirections("75c up to 5 minutes");
                 sn.setDescription(context.getString(R.string.sn_desc));
 
                 Tea tgy = realm.createObject(Tea.class);
                 tgy.setName(context.getString(R.string.tieguanyin));
-                tgy.setType("Oolong");
+                tgy.setType(context.getString(R.string.tea_oolong));
                 tgy.setRegion(context.getString(R.string.china));
                 tgy.setDirections("90-95c for 2 to 3 minutes");
                 tgy.setDescription(context.getString(R.string.tgy_desc));
 
                 Tea tie = realm.createObject(Tea.class);
                 tie.setName(context.getString(R.string.tieluohan));
-                tie.setType("Oolong");
+                tie.setType(context.getString(R.string.tea_oolong));
                 tie.setRegion(context.getString(R.string.china));
                 tie.setDirections("95c for 2 to 3 minutes");
                 tie.setDescription(context.getString(R.string.tie_desc));
@@ -233,7 +233,7 @@ public class TeaLab {
 
                 Tea wp = realm.createObject(Tea.class);
                 wp.setName(context.getString(R.string.white_peony));
-                wp.setType("White");
+                wp.setType(context.getString(R.string.tea_white));
                 wp.setDirections("75c for 3 minutes");
                 wp.setRegion(context.getString(R.string.china));
                 wp.setDescription(context.getString(R.string.wp_desc));
@@ -242,12 +242,12 @@ public class TeaLab {
         }, new Realm.Transaction.OnSuccess() {
             @Override
             public void onSuccess() {
-                Log.d("TeaLab", " Great Success!");
+                Log.d("TeaBrewer", " Great Success!");
             }
         }, new Realm.Transaction.OnError() {
             @Override
             public void onError(Throwable throwable) {
-                Log.e(TeaLab.class.getSimpleName(), throwable.toString());
+                Log.e(TeaBrewer.class.getSimpleName(), throwable.toString());
             }
         });
     }

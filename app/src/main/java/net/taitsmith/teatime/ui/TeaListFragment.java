@@ -34,6 +34,7 @@ public class TeaListFragment extends Fragment{
 
     TeaListAdapter adapter;
     OnTeaSelectedListener listener;
+    private static RealmResults<Tea> teaList;
 
     public interface OnTeaSelectedListener{
         void onTeaSelected(int position);
@@ -57,12 +58,7 @@ public class TeaListFragment extends Fragment{
         View view = inflater.inflate(R.layout.tea_list_fragment, container, false);
         ButterKnife.bind(this, view);
 
-        Realm realm = Realm.getInstance(realmConfiguration);
-
-        RealmResults<Tea> realmResults = realm.where(Tea.class)
-                .findAll();
-
-        adapter = new TeaListAdapter(getContext(), realmResults);
+        adapter = new TeaListAdapter(getContext(), teaList);
 
         teaRecyclerView.setAdapter(adapter);
 
@@ -74,6 +70,10 @@ public class TeaListFragment extends Fragment{
         });
 
         return view;
+    }
+
+    public static void setTeaList(RealmResults<Tea> realmResults) {
+        teaList = realmResults;
     }
 
 }

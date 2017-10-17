@@ -1,9 +1,13 @@
 <resources>
-    <!-- Misc labels -->
+    <!-- Misc strings -->
     <string name="app_name">Tea Time</string>
     <string name="welcome_text">Find teas by:</string>
     <string name="tea_desc">Something seems to have gone wrong here&#8230;</string>
     <string name="brew_time">%1$dc for %2$d minutes2</string>
+    <string name="alert_explanation">You\'re currently viewing a list of all the teas in Tea Time.
+        To narrow things down a bit, select a filter from the options menu in the top right corner.</string>
+    <string name="alert_got_it">Got it</string>
+    <string name="alert_dont_show_again">Don\'t show me again</string>
 
     <!-- button labels -->
     <string name="region_button">region</string>
@@ -11,17 +15,25 @@
     <string name="back_button">back</string>
     <string name="about_button">About</string>
 
+    <!-- menu strings -->
+    <string name="menu_sort_by_region">Sort by Region</string>
+    <string name="menu_sort_by_type">Sort by Type</string>
+    <string name="menu_about_teatime">About TeaTime</string>
+    <string name="menu_tea_basics">Tea Basics</string>
+
     <!-- types and regions-->
     <string name="japan">Japan</string>
     <string name="china">China</string>
     <string name="africa">Africa</string>
     <string name="india">India</string>
+    <string name="korea">Korea</string>
+    <string name="taiwan">Taiwan</string>
     <string name="other_region">Other Region</string>
     <string name="tea_black">Black Tea</string>
     <string name="tea_white">White Tea</string>
     <string name="tea_oolong">Oolong</string>
     <string name="tea_green">Green Tea</string>
-    <string name="tea_other">other teas</string>
+    <string name="tea_other">Other Teas</string>
 
 
     <!-- tea names -->
@@ -43,7 +55,7 @@
     <string name="kenyan_ctc">Kenyan CTC</string>
     <string name="kenyan">Kenyan</string>
     <string name="kukicha">Kukicha</string>
-    <string name="lapsang_souchong">Lapsang Souchnong</string>
+    <string name="lapsang_souchong">Lapsang Souchong</string>
     <string name="monkey_picked_golden">Monkey Picked Golden</string>
     <string name="pi_luo_chun">Pi Luo Chun</string>
     <string name="pouchong">Pouchong</string>

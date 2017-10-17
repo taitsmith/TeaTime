@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_sort_region"
+        android:title="@string/menu_sort_by_region">
+        <menu>
+            <item
+                android:id="@+id/sort_china"
+                android:title="@string/china"/>
+
+            <item
+                android:title="@string/japan"
+                android:id="@+id/sort_japan"/>
+            <item
+                android:title="@string/other_region"
+                android:id="@+id/sort_other_region"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_sort_type"
+        android:title="@string/menu_sort_by_type">
+        <menu>
+            <item
+                android:id="@+id/sort_green"
+                android:title="@string/tea_green"/>
+
+            <item
+                android:title="@string/tea_black"
+                android:id="@+id/sort_black"/>
+            <item
+                android:title="@string/tea_other"
+                android:id="@+id/sort_other_type"/>
+        </menu>
+    </item>
+</menu>
