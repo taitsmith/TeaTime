@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegionActivity" />
-        <activity android:name=".TypeActivity" />
-        <activity android:name=".TeaActivity" />
-        <activity android:name=".TeaListActivity" />
+        <activity android:name=".activities.RegionActivity" />
+        <activity android:name=".activities.TypeActivity" />
+        <activity android:name=".activities.TeaActivity" />
+        <activity android:name=".activities.TeaListActivity" />
 
 
             

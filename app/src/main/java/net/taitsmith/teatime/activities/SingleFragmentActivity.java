@@ -1,9 +1,11 @@
-package net.taitsmith.teatime;
+package net.taitsmith.teatime.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+
+import net.taitsmith.teatime.R;
 
 /**
  *So apparently I felt like this was the right way to do things.

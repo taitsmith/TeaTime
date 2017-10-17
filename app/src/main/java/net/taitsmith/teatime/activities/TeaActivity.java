@@ -1,8 +1,10 @@
-package net.taitsmith.teatime;
+package net.taitsmith.teatime.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+
+import net.taitsmith.teatime.ui.TeaFragment;
 
 import java.util.UUID;
 

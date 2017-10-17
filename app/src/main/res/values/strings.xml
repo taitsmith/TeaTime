@@ -3,6 +3,7 @@
     <string name="app_name">Tea Time</string>
     <string name="welcome_text">Find teas by:</string>
     <string name="tea_desc">Something seems to have gone wrong here&#8230;</string>
+    <string name="brew_time">%1$dc for %2$d minutes2</string>
 
     <!-- button labels -->
     <string name="region_button">region</string>
