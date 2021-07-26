@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable
+            name="teaListFragment"
+            type="net.taitsmith.teatime.ui.TeaListFragment" />
+    </data>
 <ListView
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tea_list_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"/>
+</layout>

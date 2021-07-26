@@ -2,10 +2,11 @@ package net.taitsmith.teatime.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import net.taitsmith.teatime.R;
 import net.taitsmith.teatime.data.Tea;
 import net.taitsmith.teatime.data.Utils;
+import net.taitsmith.teatime.databinding.ActivityMainBinding;
 import net.taitsmith.teatime.ui.TeaDetailFragment;
 import net.taitsmith.teatime.ui.TeaListFragment;
 
@@ -34,16 +36,16 @@ public class MainActivity extends AppCompatActivity implements
     private boolean isTwoPane;
     private RealmResults<Tea> teaList;
     private FragmentManager manager;
+    private ActivityMainBinding binding;
 
     public static RealmConfiguration realmConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(binding.toolbar1.toolbar);
 
         if (savedInstanceState == null) {
             sortBy = "all";
@@ -74,8 +76,6 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         checkPrefs();
-
-
         setUi();
     }
 
@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putString("SORT_ORDER", sortBy);
         outState.putInt("POSITION", position);
 

@@ -1,9 +1,9 @@
 package net.taitsmith.teatime.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
 
 import net.taitsmith.teatime.R;
 import net.taitsmith.teatime.data.Tea;
@@ -51,6 +51,7 @@ public class TeaDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putString("TEA_NAME", name);
     }
 }

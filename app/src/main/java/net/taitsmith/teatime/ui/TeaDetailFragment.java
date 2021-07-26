@@ -4,32 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import net.taitsmith.teatime.R;
+import androidx.fragment.app.Fragment;
+
 import net.taitsmith.teatime.data.Tea;
+import net.taitsmith.teatime.databinding.TeaFragmentBinding;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import io.realm.Realm;
 
 import static net.taitsmith.teatime.activities.MainActivity.realmConfiguration;
 
-/**
- * Created by taits on 03-May-16
- */
-public class TeaDetailFragment extends android.support.v4.app.Fragment {
-    @BindView(R.id.tea_name_textview)
-    TextView teaName;
-    @BindView(R.id.tea_description_text_view)
-    TextView teaDescription;
-    @BindView(R.id.tea_type_text_view)
-    TextView teaType;
-    @BindView(R.id.tea_region_text_view)
-    TextView teaRegion;
-    @BindView(R.id.tea_directions_text_view)
-    TextView teaDirections;
-
+public class TeaDetailFragment extends Fragment {
     private static String name;
     private Tea tea;
 
@@ -47,16 +32,14 @@ public class TeaDetailFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tea_fragment, container, false);
-        ButterKnife.bind(this, view);
+        TeaFragmentBinding binding = TeaFragmentBinding.inflate(inflater);
+        binding.teaNameTextview.setText(tea.getName());
+        binding.teaTypeTextView.setText(tea.getType());
+        binding.teaRegionTextView.setText(tea.getRegion());
+        binding.teaDirectionsTextView.setText(tea.getDirections());
+        binding.teaDescriptionTextView.setText(tea.getDescription());
 
-        teaName.setText(tea.getName());
-        teaType.setText(tea.getType());
-        teaRegion.setText(tea.getRegion());
-        teaDirections.setText(tea.getDirections());
-        teaDescription.setText(tea.getDescription());
-
-        return view;
+        return binding.getRoot();
     }
 
     public static void setTea(String s) {
