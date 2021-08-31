@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import net.taitsmith.teatime.R;
+import net.taitsmith.teatime.databinding.TeaListItemBinding;
 
 import io.realm.RealmResults;
 
@@ -17,8 +18,9 @@ import io.realm.RealmResults;
  */
 
 public class TeaListAdapter extends BaseAdapter {
-    private RealmResults<Tea> teaList;
-    private LayoutInflater inflater;
+    RealmResults<Tea> teaList;
+    LayoutInflater inflater;
+    TeaListItemBinding binding;
 
     public TeaListAdapter(Context context, RealmResults<Tea> teaList){
         this.teaList = teaList;
@@ -35,21 +37,16 @@ public class TeaListAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if (view == null) {
-            view = inflater.inflate(R.layout.tea_list_item, null);
+            binding = TeaListItemBinding.inflate(inflater,
+                    parent,
+                    false);
+            view = binding.getRoot();
             holder = new ViewHolder();
 
-            holder.teaNameView = view.findViewById(R.id.tea_name_text_view);
-            holder.teaRegionView = view.findViewById(R.id.tea_region_text_view);
-            holder.teaTypeView = view.findViewById(R.id.tea_type_text_view);
             view.setTag(holder);
-        } else {
-            holder = (ViewHolder) view.getTag();
         }
-        Tea tea = teaList.get(position);
 
-        holder.teaNameView.setText(tea.getName());
-        holder.teaRegionView.setText(tea.getRegion());
-        holder.teaTypeView.setText(tea.getType());
+        binding.setTea(teaList.get(position));
 
         return view;
     }
@@ -65,8 +62,5 @@ public class TeaListAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        TextView teaNameView;
-        TextView teaRegionView;
-        TextView teaTypeView;
     }
 }

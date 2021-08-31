@@ -45,7 +45,6 @@ public class TeaListFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        binding = TeaListFragmentBinding.inflate(inflater, container, false);
-       View view = binding.getRoot();
 
         adapter = new TeaListAdapter(getContext(), teaList);
 
@@ -54,7 +53,7 @@ public class TeaListFragment extends Fragment{
         binding.teaListView.setOnItemClickListener((parent, view1, position, id) ->
                 listener.onTeaSelected(position));
 
-        return view;
+        return binding.getRoot();
     }
 
     public static void setTeaList(RealmResults<Tea> realmResults) {
