@@ -6,6 +6,9 @@
     <variable
         name="teaFragment"
         type="net.taitsmith.teatime.ui.TeaDetailFragment" />
+    <variable
+        name="tea"
+        type="net.taitsmith.teatime.data.Tea" />
 </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -20,6 +23,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#fff"
+            android:text="@{tea.name}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="@+id/guideline3" />
 
@@ -30,6 +34,7 @@
             android:layout_alignParentEnd="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff"
+            android:text="@{tea.type}"
             app:layout_constraintRight_toLeftOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +45,7 @@
             android:layout_below="@id/tea_type_text_view"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff"
+            android:text="@{tea.region}"
             app:layout_constraintRight_toLeftOf="@+id/guideline4"
             app:layout_constraintTop_toBottomOf="@+id/tea_type_text_view" />
 
@@ -50,6 +56,7 @@
             android:layout_alignBottom="@+id/tea_region_text_view"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#fff"
+            android:text="@{tea.directions}"
             app:layout_constraintLeft_toLeftOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/tea_name_textview" />
 
@@ -98,7 +105,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="16dp"
-        android:text="@string/tea_desc"
+        android:text="@{tea.description}"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

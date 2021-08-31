@@ -4,6 +4,9 @@
     <variable
         name="teaFragment"
         type="net.taitsmith.teatime.ui.TeaDetailFragment" />
+    <variable
+        name="tea"
+        type="net.taitsmith.teatime.data.Tea" />
 </data>
 <RelativeLayout
     android:layout_width="match_parent"
@@ -21,10 +24,9 @@
             android:id="@+id/tea_name_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="8dp"
-            android:text="Fake Tea Name"
+            android:paddingStart="8dp"
+            android:text="@{tea.name}"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#fff" />
 
@@ -33,10 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:paddingRight="8dp"
-            android:text="Tea Type"
+            android:paddingEnd="8dp"
+            android:text="@{tea.type}"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff" />
 
@@ -45,10 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_below="@id/tea_type_text_view"
-            android:paddingRight="8dp"
-            android:text="Tea Region"
+            android:paddingEnd="8dp"
+            android:text="@{tea.region}"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff" />
 
@@ -57,10 +57,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/tea_region_text_view"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="8dp"
-            android:text="Instructions"
+            android:paddingStart="8dp"
+            android:text="@{tea.directions}"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#fff" />
 
@@ -69,14 +68,13 @@
             android:id="@+id/tea_description_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@id/tea_directions_text_view"
             android:layout_marginTop="44dp"
             android:background="@color/colorPrimary"
             android:padding="16dp"
             android:scrollbars="vertical"
-            android:text="@string/tea_desc"
+            android:text="@{tea.description}"
             android:textColor="#fff"
             android:textSize="14sp" />
 

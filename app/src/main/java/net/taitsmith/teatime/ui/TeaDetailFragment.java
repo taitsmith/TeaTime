@@ -27,17 +27,15 @@ public class TeaDetailFragment extends Fragment {
         tea = realm.where(Tea.class)
                 .equalTo("name", name)
                 .findFirst();
+
+        realm.close();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         TeaFragmentBinding binding = TeaFragmentBinding.inflate(inflater);
-        binding.teaNameTextview.setText(tea.getName());
-        binding.teaTypeTextView.setText(tea.getType());
-        binding.teaRegionTextView.setText(tea.getRegion());
-        binding.teaDirectionsTextView.setText(tea.getDirections());
-        binding.teaDescriptionTextView.setText(tea.getDescription());
+        binding.setTea(tea);
 
         return binding.getRoot();
     }
@@ -45,4 +43,5 @@ public class TeaDetailFragment extends Fragment {
     public static void setTea(String s) {
         name = s;
     }
+
 }

@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        setSupportActionBar(binding.toolbar1.toolbar);
-
         if (savedInstanceState == null) {
             sortBy = "all";
             selection = null;
@@ -69,11 +67,13 @@ public class MainActivity extends AppCompatActivity implements
 
         realm = Realm.getInstance(realmConfiguration);
 
-        teaList = Utils.teaList(sortBy, selection);
-
         if (realm.isEmpty()) {
             populateRealm(this, realm);
         }
+
+        teaList = Utils.teaList(sortBy, selection);
+
+
 
         checkPrefs();
         setUi();
@@ -85,12 +85,14 @@ public class MainActivity extends AppCompatActivity implements
             TeaDetailFragment teaDetailFragment = new TeaDetailFragment();
             setTeaList(teaList);
             setTea(teaList.get(position).getName());
-
+            setSupportActionBar(binding.toolbar.toolbar);
             manager.beginTransaction()
                     .add(R.id.tea_list_fragment, listFragment)
                     .add(R.id.tea_detail_fragment, teaDetailFragment)
                     .commit();
         } else {
+            setSupportActionBar(binding.toolbar1.toolbar);
+
             TeaListFragment teaListFragment = new TeaListFragment();
             setTeaList(teaList);
             manager.beginTransaction()

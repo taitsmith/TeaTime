@@ -33,9 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
     <FrameLayout
         android:id="@+id/tea_list_fragment"
