@@ -14,7 +14,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tea_fragment"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/md_theme_light_primary">
 
 
         <TextView
@@ -89,7 +89,7 @@
         android:layout_height="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/md_theme_light_primary"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

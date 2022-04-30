@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.taitsmith.teatime.activities.MainActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/md_theme_light_primary">
 
     <include
         android:id="@+id/toolbar1"
