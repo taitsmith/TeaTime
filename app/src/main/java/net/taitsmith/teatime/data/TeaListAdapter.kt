@@ -6,42 +6,56 @@ import android.widget.BaseAdapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import net.taitsmith.teatime.databinding.TeaListItemBinding
 
-class TeaListAdapter(context: Context?, var teaList: RealmResults<Tea>) : BaseAdapter() {
-    var inflater: LayoutInflater = LayoutInflater.from(context)
-    var binding: TeaListItemBinding? = null
-    override fun getCount(): Int {
-        return teaList.size
+class TeaListAdapter(
+    private val onItemClicked: (Tea) -> Unit
+): ListAdapter<Tea, TeaListAdapter.TeaViewHolder>(DiffCallback) {
+
+    companion object {
+        private val DiffCallback = object: DiffUtil.ItemCallback<Tea>() {
+            override fun areItemsTheSame(oldItem: Tea, newItem: Tea): Boolean {
+                return oldItem.name == newItem.name
+            }
+
+            override fun areContentsTheSame(oldItem: Tea, newItem: Tea): Boolean {
+                return oldItem == newItem
+            }
+        }
     }
 
-
-
-    override fun getItemId(position: Int): Long {
-        return 0
-    }
-
-    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        var view: View? = p1
-        val holder: ViewHolder
-        if (view == null) {
-            binding = TeaListItemBinding.inflate(
-                inflater,
-                p2,
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): TeaViewHolder {
+        val viewHolder = TeaViewHolder(
+            TeaListItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
                 false
             )
-            view = binding!!.root
-            holder = ViewHolder()
-            view.tag = holder
+        )
+
+        viewHolder.itemView.setOnClickListener {
+            val position = viewHolder.adapterPosition
+            onItemClicked(getItem(position))
         }
-        binding!!.tea = teaList[p0]
-        return view
+
+        return viewHolder
     }
 
-    override fun getItem(position: Int): Any? {
-        return null
+    override fun onBindViewHolder(holder: TeaViewHolder, position: Int) {
+        holder.bind(getItem(position))
     }
 
-    private inner class ViewHolder
-
+    class TeaViewHolder(
+        private var binding: TeaListItemBinding
+    ): RecyclerView.ViewHolder(binding.root) {
+        fun bind(tea: Tea) {
+            binding.tea = tea
+        }
+    }
 }
