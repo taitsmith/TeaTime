@@ -6,11 +6,12 @@ import androidx.room.PrimaryKey
 @Entity
 data class Tea(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: String,
 
     var name: String,
     var type: String,
     var region: String,
     var instructions: String,
-    var description: String
+    var description: String,
+    var triedIt: Boolean
 )

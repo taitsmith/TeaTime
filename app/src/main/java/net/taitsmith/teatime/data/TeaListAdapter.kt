@@ -1,10 +1,6 @@
 package net.taitsmith.teatime.data
 
-import android.content.Context
-import io.realm.RealmResults
-import android.widget.BaseAdapter
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
