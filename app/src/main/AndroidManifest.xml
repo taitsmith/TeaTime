@@ -3,7 +3,10 @@
     package="net.taitsmith.teatime"
     android:versionCode="2">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".TeaTimeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/teacup"
         android:label="@string/app_name"

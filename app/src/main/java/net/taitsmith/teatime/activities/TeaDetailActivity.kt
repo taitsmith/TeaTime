@@ -1,12 +1,11 @@
 package net.taitsmith.teatime.activities
 
-import net.taitsmith.teatime.ui.TeaDetailFragment.Companion.setTea
-import androidx.appcompat.app.AppCompatActivity
-import net.taitsmith.teatime.data.Tea
 import android.os.Bundle
-import io.realm.Realm
+import androidx.appcompat.app.AppCompatActivity
 import net.taitsmith.teatime.R
+import net.taitsmith.teatime.data.Tea
 import net.taitsmith.teatime.ui.TeaDetailFragment
+import net.taitsmith.teatime.ui.TeaDetailFragment.Companion.setTea
 
 /**
  * For phone mode only, displays a [TeaDetailFragment]
@@ -17,16 +16,13 @@ class TeaDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tea_detail)
-        val realm = Realm.getInstance(MainActivity.realmConfiguration)
         if (intent.hasExtra("TEA_NAME")) {
             name = intent.getStringExtra("TEA_NAME")
         }
         if (savedInstanceState != null) {
             name = savedInstanceState.getString("TEA_NAME")
         }
-        tea = realm.where(Tea::class.java)
-            .equalTo("name", name)
-            .findFirst()
+
         val teaDetailFragment = TeaDetailFragment()
         val manager = supportFragmentManager
         setTea(name)

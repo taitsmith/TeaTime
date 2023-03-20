@@ -1,19 +1,28 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'realm-android'
-
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'dagger.hilt.android.plugin'
+}
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "net.taitsmith.teatime"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 2
         versionName "2.0"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemalocation":
+                                "$projectDir/schemas".toString()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -30,13 +39,31 @@ android {
 
 dependencies {
     dependencies { fileTree(dir: 'libs', include: ['*.jar']) }
-    testImplementation 'junit:junit:4.13.2'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    def room_version = "2.5.0"
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    implementation "androidx.core:core-ktx:1.7.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21"
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.room:room-runtime:$room_version"
+
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.dagger:hilt-android:2.43.2'
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    kapt "androidx.room:room-compiler:$room_version"
+    kapt 'com.google.dagger:hilt-compiler:2.43.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "androidx.room:room-testing:$room_version"
 }
 repositories {
     mavenCentral()
