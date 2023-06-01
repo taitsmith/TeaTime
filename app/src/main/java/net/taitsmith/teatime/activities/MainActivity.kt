@@ -9,14 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
-import dagger.hilt.android.AndroidEntryPoint
 import net.taitsmith.teatime.R
 import net.taitsmith.teatime.databinding.ActivityMainBinding
 import net.taitsmith.teatime.ui.TeaDetailFragment
 import net.taitsmith.teatime.ui.TeaListFragment
 import net.taitsmith.teatime.viewmodels.MainViewModel
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private var sortBy: String? = null
     private var selection: String? = null
@@ -48,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
         manager = supportFragmentManager
 
-        populateDbIfNeeded()
         checkPrefs()
         setUi()
     }
@@ -70,10 +67,6 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.tea_list_fragment, teaListFragment)
                 .commit()
         }
-    }
-
-    private fun populateDbIfNeeded() {
-        if (mainViewModel.shouldPopulateDatabase()) mainViewModel.createDb()
     }
 
     fun onTeaSelected(position: Int) {
