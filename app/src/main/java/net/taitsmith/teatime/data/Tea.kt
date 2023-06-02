@@ -1,17 +1,17 @@
 package net.taitsmith.teatime.data
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import io.realm.kotlin.types.RealmObject
+import io.realm.kotlin.types.annotations.PrimaryKey
+import org.mongodb.kbson.ObjectId
 
-@Entity
-data class Tea(
-    @PrimaryKey(autoGenerate = true)
-    val id: String,
-
-    var name: String,
-    var type: String,
-    var region: String,
-    var instructions: String,
-    var description: String,
-    var triedIt: Boolean
-)
+class Tea : RealmObject {
+    @PrimaryKey
+    var _id: ObjectId = ObjectId()
+    var name: String = ""
+    var type: String = ""
+    var region: String = ""
+    var temp: Int = 0
+    var time: Int = 0
+    var description: String = ""
+    var triedIt: Boolean = false
+}

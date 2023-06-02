@@ -56,7 +56,7 @@
             android:layout_alignBottom="@+id/tea_region_text_view"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#fff"
-            android:text="@{tea.instructions}"
+            android:text="@{tea.temp}"
             app:layout_constraintLeft_toLeftOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/tea_name_textview" />
 

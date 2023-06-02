@@ -2,6 +2,7 @@ package net.taitsmith.teatime.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -9,7 +10,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
+import io.realm.kotlin.InitialDataCallback
+import io.realm.kotlin.Realm
+import io.realm.kotlin.RealmConfiguration
+import io.realm.kotlin.ext.query
+import io.realm.kotlin.notifications.InitialResults
+import io.realm.kotlin.notifications.ResultsChange
+import io.realm.kotlin.query.RealmResults
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.flow.Flow
 import net.taitsmith.teatime.R
+import net.taitsmith.teatime.data.Tea
 import net.taitsmith.teatime.databinding.ActivityMainBinding
 import net.taitsmith.teatime.ui.TeaDetailFragment
 import net.taitsmith.teatime.ui.TeaListFragment
@@ -48,6 +59,22 @@ class MainActivity : AppCompatActivity() {
 
         checkPrefs()
         setUi()
+
+        createDb()
+    }
+
+    private fun createDb() {
+        val bundledRealmConfig = RealmConfiguration.Builder(setOf(Tea::class))
+            .initialRealmFile("assets/tea.realm")
+            .schemaVersion(4L)
+            .build()
+
+        val bundledRealm = Realm.open(bundledRealmConfig)
+        val teas: RealmResults<Tea> = bundledRealm.query<Tea>().find()
+        for (tea in teas) {
+            Log.d("TEA: ", tea.name)
+        }
+        bundledRealm.close()
     }
 
     private fun setUi() {

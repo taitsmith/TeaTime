@@ -59,7 +59,7 @@
             android:layout_alignBottom="@+id/tea_region_text_view"
             android:layout_alignParentStart="true"
             android:paddingStart="8dp"
-            android:text="@{tea.instructions}"
+            android:text="@{tea.temp}"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#fff" />
 
