@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "520456274718",
+    "firebase_url": "https://tea-time-8dd94.firebaseio.com",
+    "project_id": "tea-time-8dd94",
+    "storage_bucket": "tea-time-8dd94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520456274718:android:e99179c8080afe3df5bf0f",
+        "android_client_info": {
+          "package_name": "net.taitsmith.teatime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520456274718-54bm43tl72383q6jcpb3e0teunl6j5ms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.taitsmith.teatime",
+            "certificate_hash": "d65395dc230ad5ea50ef7588cb387acce2487d2f"
+          }
+        },
+        {
+          "client_id": "520456274718-5ssh5ae0bpch959miqlm8oqri113iugf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTQNWCom_ynPVKoK3djqDrVaR9TnRb9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520456274718-5ssh5ae0bpch959miqlm8oqri113iugf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

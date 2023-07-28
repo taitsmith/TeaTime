@@ -1,12 +1,6 @@
 package net.taitsmith.teatime.data
 
-import io.realm.kotlin.types.RealmObject
-import io.realm.kotlin.types.annotations.PrimaryKey
-import org.mongodb.kbson.ObjectId
-
-class Tea : RealmObject {
-    @PrimaryKey
-    var _id: ObjectId = ObjectId()
+class Tea  {
     var name: String = ""
     var type: String = ""
     var region: String = ""
